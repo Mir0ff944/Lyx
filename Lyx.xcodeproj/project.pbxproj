@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D383E53C1DF340C200DE9340 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D383E53B1DF340C200DE9340 /* TableController.swift */; };
+		D383E53E1DF340DF00DE9340 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D383E53D1DF340DF00DE9340 /* EventsController.swift */; };
 		D3F8DC171DF06BD000E3BC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F8DC161DF06BD000E3BC70 /* AppDelegate.swift */; };
-		D3F8DC191DF06BD000E3BC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F8DC181DF06BD000E3BC70 /* ViewController.swift */; };
 		D3F8DC1C1DF06BD000E3BC70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F8DC1A1DF06BD000E3BC70 /* Main.storyboard */; };
 		D3F8DC1F1DF06BD000E3BC70 /* Lyx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3F8DC1D1DF06BD000E3BC70 /* Lyx.xcdatamodeld */; };
 		D3F8DC211DF06BD000E3BC70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F8DC201DF06BD000E3BC70 /* Assets.xcassets */; };
@@ -35,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D383E53B1DF340C200DE9340 /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		D383E53D1DF340DF00DE9340 /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		D3F8DC131DF06BD000E3BC70 /* Lyx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F8DC161DF06BD000E3BC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3F8DC181DF06BD000E3BC70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3F8DC1B1DF06BD000E3BC70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3F8DC1E1DF06BD000E3BC70 /* Lyx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lyx.xcdatamodel; sourceTree = "<group>"; };
 		D3F8DC201DF06BD000E3BC70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				D3F8DC161DF06BD000E3BC70 /* AppDelegate.swift */,
-				D3F8DC181DF06BD000E3BC70 /* ViewController.swift */,
 				D3F8DC1A1DF06BD000E3BC70 /* Main.storyboard */,
 				D3F8DC201DF06BD000E3BC70 /* Assets.xcassets */,
 				D3F8DC221DF06BD000E3BC70 /* LaunchScreen.storyboard */,
 				D3F8DC251DF06BD000E3BC70 /* Info.plist */,
 				D3F8DC1D1DF06BD000E3BC70 /* Lyx.xcdatamodeld */,
+				D383E53B1DF340C200DE9340 /* TableController.swift */,
+				D383E53D1DF340DF00DE9340 /* EventsController.swift */,
 			);
 			path = Lyx;
 			sourceTree = "<group>";
@@ -265,8 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3F8DC191DF06BD000E3BC70 /* ViewController.swift in Sources */,
+				D383E53C1DF340C200DE9340 /* TableController.swift in Sources */,
 				D3F8DC171DF06BD000E3BC70 /* AppDelegate.swift in Sources */,
+				D383E53E1DF340DF00DE9340 /* EventsController.swift in Sources */,
 				D3F8DC1F1DF06BD000E3BC70 /* Lyx.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +520,7 @@
 				D3F8DC401DF06BD000E3BC70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3F8DC411DF06BD000E3BC70 /* Build configuration list for PBXNativeTarget "LyxTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +529,7 @@
 				D3F8DC431DF06BD000E3BC70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3F8DC441DF06BD000E3BC70 /* Build configuration list for PBXNativeTarget "LyxUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +538,7 @@
 				D3F8DC461DF06BD000E3BC70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
