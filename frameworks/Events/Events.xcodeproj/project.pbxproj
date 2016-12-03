@@ -412,6 +412,7 @@
 				D3259D4C1DF34A9500E1CDA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3259D4D1DF34A9500E1CDA4 /* Build configuration list for PBXNativeTarget "EventsTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				D3259D4F1DF34A9500E1CDA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

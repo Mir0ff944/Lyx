@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Events
 
-class TableController: UITableViewController {
+class TableController: UITableViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchBar.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -19,7 +23,27 @@ class TableController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchQuery: String) {
+        print("Search: \(searchQuery)")
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let search = searchBar.text{
+            print("Search button pressed: \(search)")
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            try? Eventim.sharedInstance.search(withText: search, { () in
+                print("search complete")
+                DispatchQueue.main.async {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.tableView.reloadData()
+                    self.searchBar.resignFirstResponder()
+                }
+            })
+            
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -36,6 +60,7 @@ class TableController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
