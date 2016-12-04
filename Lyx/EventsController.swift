@@ -10,8 +10,26 @@ import UIKit
 
 class EventsController: UIViewController {
 
+    var eventID: String?
+    
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var contentView: UIView!
+    @IBOutlet var summaryView: UIView!
+    @IBOutlet var descriptionView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let id = self.eventID {
+            print("ID: \(id)")
+            DispatchQueue.main.async {
+                let frameHeight = self.summaryView.frame.height + self.descriptionView.frame.height + 25
+                print("frame height \(frameHeight)")
+                let size = CGSize(width: self.contentView.frame.width, height: frameHeight)
+                self.contentView.frame.size = size
+                self.scrollView.contentSize = size
+                
+            }
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -20,6 +38,7 @@ class EventsController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

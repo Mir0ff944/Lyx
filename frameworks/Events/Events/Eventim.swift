@@ -53,7 +53,7 @@ public  class Eventim{
     
     public func search(withText text:String, _ completion: @escaping ()->()) throws {
         let json = "https://lyx-api.herokuapp.com/performer?p=\(text)"
-        print(json)
+        //print(json)
         let session = URLSession.shared
         guard let performerURL = NSURL(string: json) else {
             throw JSONError.InvalidURL(json)
