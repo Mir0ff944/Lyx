@@ -11,6 +11,7 @@ import Foundation
 public  struct Favorites {
     public var title: String
     public var genre: String
+    public var image: String
     public var id: String
 }
 
@@ -24,7 +25,7 @@ public struct Events {
 
 enum JSONError: Error{
     case InvalidURL(String)
-    case InvalidKEy(String)
+    case InvalidKey(String)
     case InvalidArray
     case InvalidData
     case InvalidImage
@@ -34,24 +35,62 @@ enum JSONError: Error{
 public  class Eventim{
     public static var sharedInstance = Eventim()
     
-    var searchData:[Favorites]
+    var Favorite: [Favorites]
     
     public init() {
-        searchData = []
+        Favorite = []
     }
     
     public func getFavorites(atIndex index: Int ) throws -> Favorites{
-        return Favorites(title: "Ariana Grande", genre: "Pop", id: "P0-001-000237892-2")
+        return self.Favorite[index]
     }
     
     public var count: Int {
         get {
-            return 0
+            return self.Favorite.count
         }
     }
     
-    public func search(withText text:String, _ completion: @escaping ( )->()) throws {
-        completion()
+    public func search(withText text:String, _ completion: @escaping ()->()) throws {
+        let json = "https://lyx-api.herokuapp.com/performer?p=\(text)"
+        print(json)
+        let session = URLSession.shared
+        guard let performerURL = NSURL(string: json) else {
+            throw JSONError.InvalidURL(json)
+        }
+        session.dataTask(with: performerURL as URL, completionHandler: {(data, response, error) -> Void in
+            do{
+                let json = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
+                print(json)
+                guard let jsondata = json["performers"] as! [[String: Any]]? else {
+                    throw JSONError.InvalidKey("items")
+                }
+                self.Favorite = []
+                for result in jsondata{
+                    print(result)
+                    guard let title = result["title"] as! String? else {
+                        throw JSONError.InvalidKey("Invalid Key")
+                    }
+                    print(title)
+                    guard let genre = result["music_genre"] as! String? else {
+                        throw JSONError.InvalidKey("Invalid Key")
+                    }
+                    print(genre)
+                    guard let image = result["image"] as! String? else {
+                        throw JSONError.InvalidKey("Invalid Key")
+                    }
+                    print(image)
+                    guard let id = result["id"] as! String? else {
+                        throw JSONError.InvalidKey("Invalid Key")
+                    }
+                    print(id)
+                    self.Favorite.append(Favorites(title: title, genre: genre, image: image, id: id))
+                }
+            } catch {
+                print("erro thrown: \(error)")
+            }
+            completion()
+        }).resume()
     }
     
     public func  getDetails(withID id:String, _ completion: @escaping (Events)->()) throws {
