@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Events
 
 class EventsController: UIViewController {
 
@@ -16,19 +17,35 @@ class EventsController: UIViewController {
     @IBOutlet var contentView: UIView!
     @IBOutlet var summaryView: UIView!
     @IBOutlet var descriptionView: UIView!
+    @IBOutlet var eventTitle: UILabel!
+    @IBOutlet var eventImage: UIImageView!
+    @IBOutlet var eventDescription: UILabel!
+    @IBOutlet var summaryViewHeight: NSLayoutConstraint!
+    @IBOutlet var descriptionViewHeight: NSLayoutConstraint!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let id = self.eventID {
             print("ID: \(id)")
-            DispatchQueue.main.async {
-                let frameHeight = self.summaryView.frame.height + self.descriptionView.frame.height + 25
-                print("frame height \(frameHeight)")
-                let size = CGSize(width: self.contentView.frame.width, height: frameHeight)
-                self.contentView.frame.size = size
-                self.scrollView.contentSize = size
-                
-            }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            try? Eventim.sharedInstance.getDetails(withID: id, { (Events) in
+                DispatchQueue.main.async {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.summaryViewHeight.constant = self.eventImage.frame.height + 16
+                    self.descriptionViewHeight.constant = self.eventDescription.frame.height + 16
+                    print("summary Height \(self.summaryViewHeight)")
+                    print("description height \(self.descriptionViewHeight)")
+                    let frameHeight = self.summaryView.frame.height + self.descriptionView.frame.height + 25
+                    print("frame height \(frameHeight)")
+                    let size = CGSize(width: self.contentView.frame.width, height: frameHeight)
+                    self.contentView.frame.size = size
+                    self.scrollView.contentSize = size
+                    self.summaryView.sizeToFit()
+                    self.contentView.sizeToFit()
+                    
+                }
+            })
         }
 
         // Do any additional setup after loading the view.

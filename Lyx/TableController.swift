@@ -68,7 +68,7 @@ class TableController: UITableViewController, UISearchBarDelegate {
 
         if let lable = cell.textLabel, let detail = cell.detailTextLabel {
             lable.text = try? Eventim.sharedInstance.getFavorites(atIndex: indexPath.row).title
-            detail.text = try? Eventim.sharedInstance.getFavorites(atIndex: indexPath.row).genre
+            detail.text = try? Eventim.sharedInstance.getFavorites(atIndex: indexPath.row).region
         }
         // Configure the cell...
 
@@ -117,7 +117,7 @@ class TableController: UITableViewController, UISearchBarDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(segue.identifier!)
+        //print(segue.identifier!)
         if segue.identifier == "favoriteResult" {
             print("segue: \(segue.identifier)")
             if let IndexPath = self.tableView.indexPathForSelectedRow {
@@ -125,7 +125,7 @@ class TableController: UITableViewController, UISearchBarDelegate {
                 if let navigationController = segue.destination as? UINavigationController {
                     if let eventsController = navigationController.topViewController as? EventsController {
                         print("found Table Controller")
-                        eventsController.eventID = try? Eventim.sharedInstance.getFavorites(atIndex: IndexPath.row).id
+                        eventsController.eventID = try? Eventim.sharedInstance.getFavorites(atIndex: IndexPath.row).city
                     }
                 }
             }

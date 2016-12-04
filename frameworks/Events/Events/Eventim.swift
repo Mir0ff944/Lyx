@@ -10,9 +10,8 @@ import Foundation
 
 public  struct Favorites {
     public var title: String
-    public var genre: String
-    public var image: String
-    public var id: String
+    public var region: String
+    public var city: String
 }
 
 public struct Events {
@@ -52,7 +51,7 @@ public  class Eventim{
     }
     
     public func search(withText text:String, _ completion: @escaping ()->()) throws {
-        let json = "https://lyx-api.herokuapp.com/performer?p=\(text)"
+        let json = "https://lyx-api.herokuapp.com/performer/events?p=\(text)"
         //print(json)
         let session = URLSession.shared
         guard let performerURL = NSURL(string: json) else {
@@ -62,7 +61,7 @@ public  class Eventim{
             do{
                 let json = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
                 print(json)
-                guard let jsondata = json["performers"] as! [[String: Any]]? else {
+                guard let jsondata = json["events"] as! [[String: Any]]? else {
                     throw JSONError.InvalidKey("items")
                 }
                 self.Favorite = []
@@ -72,19 +71,15 @@ public  class Eventim{
                         throw JSONError.InvalidKey("Invalid Key")
                     }
                     print(title)
-                    guard let genre = result["music_genre"] as! String? else {
+                    guard let region = result["region"] as! String? else {
                         throw JSONError.InvalidKey("Invalid Key")
                     }
-                    print(genre)
-                    guard let image = result["image"] as! String? else {
+                    print(region)
+                    guard let city = result["city"] as! String? else {
                         throw JSONError.InvalidKey("Invalid Key")
                     }
-                    print(image)
-                    guard let id = result["id"] as! String? else {
-                        throw JSONError.InvalidKey("Invalid Key")
-                    }
-                    print(id)
-                    self.Favorite.append(Favorites(title: title, genre: genre, image: image, id: id))
+                    print(city)
+                    self.Favorite.append(Favorites(title: title, region: region, city: city))
                 }
             } catch {
                 print("erro thrown: \(error)")
