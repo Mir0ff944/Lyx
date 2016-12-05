@@ -8,7 +8,7 @@
 
 import Foundation
 
-public  struct Favorites {
+public  struct Event {
     public var title: String
     public var region: String
     public var city: String
@@ -34,13 +34,13 @@ enum JSONError: Error{
 public  class Eventim{
     public static var sharedInstance = Eventim()
     
-    var Favorite: [Favorites]
+    var Favorite: [Event]
     
     public init() {
         Favorite = []
     }
     
-    public func getFavorites(atIndex index: Int ) throws -> Favorites{
+    public func getFavorites(atIndex index: Int ) throws -> Event{
         return self.Favorite[index]
     }
     
@@ -51,8 +51,8 @@ public  class Eventim{
     }
     
     public func search(withText text:String, _ completion: @escaping ()->()) throws {
-        let json = "https://lyx-api.herokuapp.com/performer/events?p=\(text)"
-        //print(json)
+        let json = "https://lyx-api.herokuapp.com/events?l=\(text)"
+        print(json)
         let session = URLSession.shared
         guard let performerURL = NSURL(string: json) else {
             throw JSONError.InvalidURL(json)
@@ -61,7 +61,7 @@ public  class Eventim{
             do{
                 let json = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
                 print(json)
-                guard let jsondata = json["events"] as! [[String: Any]]? else {
+                guard let jsondata = json["event"] as! [[String: Any]]? else {
                     throw JSONError.InvalidKey("items")
                 }
                 self.Favorite = []
@@ -71,21 +71,25 @@ public  class Eventim{
                         throw JSONError.InvalidKey("Invalid Key")
                     }
                     print(title)
-                    guard let region = result["region"] as! String? else {
+                    guard let region = result["region_name"] as! String? else {
                         throw JSONError.InvalidKey("Invalid Key")
                     }
                     print(region)
-                    guard let city = result["city"] as! String? else {
+                    guard let city = result["city_name"] as! String? else {
                         throw JSONError.InvalidKey("Invalid Key")
                     }
                     print(city)
-                    self.Favorite.append(Favorites(title: title, region: region, city: city))
+                    self.Favorite.append(Event(title: title, region: region, city: city))
                 }
             } catch {
                 print("erro thrown: \(error)")
             }
             completion()
         }).resume()
+    }
+    
+    public func getEvent(forIndex index: Int) -> Event {
+        return Favorite[index]
     }
     
     public func  getDetails(withID id:String, _ completion: @escaping (Events)->()) throws {
