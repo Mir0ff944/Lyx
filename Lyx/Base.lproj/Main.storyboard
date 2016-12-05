@@ -150,13 +150,23 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpF-sM-uI4">
+                                                        <rect key="frame" x="254" y="16" width="80" height="30"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Web View"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="Paq-dM-TaF"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Web View"/>
+                                                    </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.098255526199999998" blue="0.1231658165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="oLV-3e-WFc" firstAttribute="leading" secondItem="xEX-7U-Fr7" secondAttribute="leading" constant="20" id="1Qw-lS-Nny"/>
                                                     <constraint firstItem="MlY-EW-rsF" firstAttribute="leading" secondItem="xEX-7U-Fr7" secondAttribute="leadingMargin" constant="8" id="7Wm-Am-wdk"/>
                                                     <constraint firstAttribute="height" constant="180" id="Cqr-RI-XPm"/>
                                                     <constraint firstItem="x59-eC-368" firstAttribute="top" secondItem="oLV-3e-WFc" secondAttribute="bottom" constant="8" id="MdH-ge-TxT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SpF-sM-uI4" secondAttribute="trailing" constant="8" id="XT1-QU-YLK"/>
+                                                    <constraint firstItem="SpF-sM-uI4" firstAttribute="top" secondItem="xEX-7U-Fr7" secondAttribute="top" constant="16" id="ciG-CF-U4q"/>
                                                     <constraint firstItem="oLV-3e-WFc" firstAttribute="top" secondItem="MlY-EW-rsF" secondAttribute="bottom" constant="8" id="fAv-Xb-0RU"/>
                                                     <constraint firstItem="x59-eC-368" firstAttribute="leading" secondItem="xEX-7U-Fr7" secondAttribute="leading" constant="20" id="gru-Kz-hOr"/>
                                                     <constraint firstItem="MlY-EW-rsF" firstAttribute="top" secondItem="xEX-7U-Fr7" secondAttribute="topMargin" constant="8" id="qsa-QT-sro"/>
@@ -213,14 +223,16 @@
                     <navigationItem key="navigationItem" title="Events" id="970-29-BVw"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="city" destination="oLV-3e-WFc" id="TMJ-aN-XQN"/>
                         <outlet property="contentView" destination="cAT-5N-DGp" id="2hu-sA-q1D"/>
                         <outlet property="descriptionView" destination="CxQ-4U-tA9" id="lhJ-Ou-V7i"/>
                         <outlet property="descriptionViewHeight" destination="m8S-CX-vLf" id="7sV-2z-8CA"/>
+                        <outlet property="eventAddress" destination="x59-eC-368" id="PS8-Uw-9a1"/>
                         <outlet property="eventDescription" destination="tG0-yG-9vI" id="U8n-On-Dih"/>
                         <outlet property="eventTitle" destination="MlY-EW-rsF" id="BGr-Gk-Lgf"/>
                         <outlet property="scrollView" destination="Lv1-u2-Pk5" id="qef-sY-7NU"/>
                         <outlet property="summaryView" destination="xEX-7U-Fr7" id="uEa-xa-BDh"/>
-                        <outlet property="summaryViewHeight" destination="Cqr-RI-XPm" id="GsP-Ky-7Iz"/>
+                        <outlet property="summaryViewHeight" destination="Cqr-RI-XPm" id="35l-KG-ZQf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiM-Sr-lRX" userLabel="First Responder" sceneMemberID="firstResponder"/>

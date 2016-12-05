@@ -67,8 +67,8 @@ class TableController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Favorites", for: indexPath)
 
         if let lable = cell.textLabel, let detail = cell.detailTextLabel {
-            lable.text = try? Eventim.sharedInstance.getFavorites(atIndex: indexPath.row).title
-            detail.text = try? Eventim.sharedInstance.getFavorites(atIndex: indexPath.row).region
+            lable.text = Eventim.sharedInstance.getEvent(forIndex: indexPath.row).title
+            detail.text = Eventim.sharedInstance.getEvent(forIndex: indexPath.row).region
         }
         // Configure the cell...
 
@@ -125,7 +125,9 @@ class TableController: UITableViewController, UISearchBarDelegate {
                 if let navigationController = segue.destination as? UINavigationController {
                     if let eventsController = navigationController.topViewController as? EventsController {
                         print("found Table Controller")
-                        eventsController.eventID = try? Eventim.sharedInstance.getFavorites(atIndex: IndexPath.row).city
+                        eventsController.event = Eventim.sharedInstance.getEvent(forIndex: IndexPath.row).title
+                        
+                       // eventsController.event = try? Eventim.sharedInstance.getFavorites(atIndex: IndexPath.row).city
                     }
                 }
             }

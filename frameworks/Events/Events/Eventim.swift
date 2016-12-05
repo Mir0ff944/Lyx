@@ -14,13 +14,13 @@ public  struct Event {
     public var city: String
 }
 
-public struct Events {
-    public var city_name: String
-    public var title: String
-    public var image: String
-    public var venue: String
-    public var start_time: String
-}
+//public struct Events {
+//    public var city_name: String
+//    public var title: String
+//    public var image: String
+//    public var venue: String
+//    public var start_time: String
+//}
 
 enum JSONError: Error{
     case InvalidURL(String)
@@ -92,7 +92,7 @@ public  class Eventim{
         return Favorite[index]
     }
     
-    public func  getDetails(withID id:String, _ completion: @escaping (Events)->()) throws {
-        completion(Events(city_name: "London", title: "Ari in London", image: "random url", venue: "O2 London", start_time: "20:00"))
-    }
+//    public func  getDetails(withID id:String, _ completion: @escaping (Events)->()) throws {
+//        completion(Events(city_name: "London", title: "Ari in London", image: "random url", venue: "O2 London", start_time: "20:00"))
+//    }
 }
