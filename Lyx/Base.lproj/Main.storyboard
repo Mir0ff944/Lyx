@@ -157,7 +157,7 @@
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.96350812856077772" green="0.97037807235294382" blue="0.99098790372944168" alpha="0.97699058221506829" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="oLV-3e-WFc" firstAttribute="leading" secondItem="xEX-7U-Fr7" secondAttribute="leading" constant="20" id="1Qw-lS-Nny"/>
                                                     <constraint firstItem="MlY-EW-rsF" firstAttribute="leading" secondItem="xEX-7U-Fr7" secondAttribute="leadingMargin" constant="8" id="7Wm-Am-wdk"/>
@@ -180,7 +180,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.1563294197" green="0.41447697639999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.84235873289999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailingMargin" secondItem="tG0-yG-9vI" secondAttribute="trailing" constant="8" id="BEG-Uz-S6O"/>
                                                     <constraint firstItem="tG0-yG-9vI" firstAttribute="leading" secondItem="CxQ-4U-tA9" secondAttribute="leadingMargin" constant="8" id="ECb-yA-chv"/>
@@ -190,7 +190,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="CxQ-4U-tA9" firstAttribute="leading" secondItem="cAT-5N-DGp" secondAttribute="leadingMargin" id="BAi-JX-9f7"/>
                                             <constraint firstItem="xEX-7U-Fr7" firstAttribute="leading" secondItem="cAT-5N-DGp" secondAttribute="leadingMargin" id="H8h-di-WTP"/>
@@ -201,6 +201,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.60582636443661975" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="cAT-5N-DGp" firstAttribute="leading" secondItem="Lv1-u2-Pk5" secondAttribute="leadingMargin" id="0jH-bb-SZC"/>
                                     <constraint firstItem="cAT-5N-DGp" firstAttribute="centerY" secondItem="Lv1-u2-Pk5" secondAttribute="centerY" id="0x3-lZ-RLy"/>
