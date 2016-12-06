@@ -852,6 +852,7 @@
 				D3259DBD1DF718E500E1CDA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3259DC11DF718E500E1CDA4 /* Build configuration list for PBXNativeTarget "LyxWatchApp" */ = {
 			isa = XCConfigurationList;
@@ -860,6 +861,7 @@
 				D3259DBB1DF718E500E1CDA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3F8DC0E1DF06BD000E3BC70 /* Build configuration list for PBXProject "Lyx" */ = {
 			isa = XCConfigurationList;

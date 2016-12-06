@@ -31,17 +31,28 @@ class EventsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        eventTitle?.text = event?.title
-        city?.text = event?.city
-        eventAddress?.text = event?.address
-        eventDescription?.text = event?.description
-//        let url = NSURL(string: (event?.image)!)
-//        imageUI = NSData(contentsOf: url! as URL)
-//        if imageUI != nil {
-//            imageView?.image = UIImage(data: imageUI! as Data)
-//        }
-        
+        DispatchQueue.main.async {
+            self.city?.text = self.event?.city
+            self.eventAddress?.text = self.event?.address
+            self.eventDescription?.text = self.event?.description
+            //        let url = NSURL(string: (event?.image)!)
+            //        imageUI = NSData(contentsOf: url! as URL)
+            //        if imageUI != nil {
+            //            imageView?.image = UIImage(data: imageUI! as Data)
+            //        }
+            
+            self.summaryViewHeight.constant = self.imageView.frame.height + 16
+            self.descriptionViewHeight.constant = self.eventDescription.frame.height + 16
+            print("summary Height \(self.summaryViewHeight)")
+            print("description height \(self.descriptionViewHeight)")
+            let frameHeight = self.summaryView.frame.height + self.descriptionView.frame.height + 25
+            print("frame height \(frameHeight)")
+            let size = CGSize(width: self.contentView.frame.width, height: frameHeight)
+            self.contentView.frame.size = size
+            self.scrollView.contentSize = size
+            self.summaryView.sizeToFit()
+            self.contentView.sizeToFit()
+        }
 
         
 //        if let id = self.event {
