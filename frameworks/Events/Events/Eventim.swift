@@ -92,7 +92,7 @@ public  class Eventim{
         return Favorite[index]
     }
     
-//    public func  getDetails(withID id:String, _ completion: @escaping (Events)->()) throws {
-//        completion(Events(city_name: "London", title: "Ari in London", image: "random url", venue: "O2 London", start_time: "20:00"))
+//    public func  getDetails(withID id:String, _ completion: @escaping (Event)->()) throws {
+//        completion(Event( title: title?, region: "random url", city: "London"))
 //    }
 }

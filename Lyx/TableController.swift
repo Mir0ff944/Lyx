@@ -125,7 +125,8 @@ class TableController: UITableViewController, UISearchBarDelegate {
                 if let navigationController = segue.destination as? UINavigationController {
                     if let eventsController = navigationController.topViewController as? EventsController {
                         print("found Table Controller")
-                        eventsController.event = Eventim.sharedInstance.getEvent(forIndex: IndexPath.row).title
+                        eventsController.event = Eventim.sharedInstance.getEvent(forIndex: IndexPath.row)
+                       // eventsController.event = Eventim.sharedInstance.getEvent(forIndex: IndexPath.row).region
                         
                        // eventsController.event = try? Eventim.sharedInstance.getFavorites(atIndex: IndexPath.row).city
                     }

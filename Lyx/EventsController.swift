@@ -12,7 +12,7 @@ import Events
 class EventsController: UIViewController {
 
     //var eventID: String?
-    var event: String?
+    var event: Event?
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
@@ -29,17 +29,20 @@ class EventsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        eventTitle?.text = event?.title
+        city?.text = event?.city
+
         
-        eventTitle?.text = self.event
-//        eventDescription?.text = Eventim.sharedInstance.getEvent(forIndex: IndexPath).city
-        
-//        if let id = self.eventID {
+//        if let id = self.event {
 //            print("ID: \(id)")
 //            UIApplication.shared.isNetworkActivityIndicatorVisible = true
 //            try? Eventim.sharedInstance.getDetails(withID: id, { (Events) in
 //                DispatchQueue.main.async {
 //                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-//                    self.summaryViewHeight.constant = self.eventImage.frame.height + 16
+//                    self.city.text = Events.city
+//                    self.eventAddress.text = Events.region
+//                   // self.summaryViewHeight.constant = self.eventImage.frame.height + 16
 //                    self.descriptionViewHeight.constant = self.eventDescription.frame.height + 16
 //                    print("summary Height \(self.summaryViewHeight)")
 //                    print("description height \(self.descriptionViewHeight)")
