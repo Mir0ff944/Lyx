@@ -35,11 +35,11 @@ class EventsController: UIViewController {
             self.city?.text = self.event?.city
             self.eventAddress?.text = self.event?.address
             self.eventDescription?.text = self.event?.description
-            //        let url = NSURL(string: (event?.image)!)
-            //        imageUI = NSData(contentsOf: url! as URL)
-            //        if imageUI != nil {
-            //            imageView?.image = UIImage(data: imageUI! as Data)
-            //        }
+            let url = NSURL(string: (self.event?.image)!)
+            self.imageUI = NSData(contentsOf: url! as URL)
+            if self.imageUI != nil {
+                self.imageView?.image = UIImage(data: self.imageUI! as Data)
+            }
             
             self.summaryViewHeight.constant = self.imageView.frame.height + 16
             self.descriptionViewHeight.constant = self.eventDescription.frame.height + 16
