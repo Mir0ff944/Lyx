@@ -11,8 +11,9 @@ import Events
 
 class EventsController: UIViewController {
 
-    //var eventID: String?
+//    var eventID: String?
     var event: Event?
+    var imageUI: NSData?
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
@@ -24,14 +25,23 @@ class EventsController: UIViewController {
     @IBOutlet var summaryViewHeight: NSLayoutConstraint!
     @IBOutlet var city: UILabel!
     @IBOutlet var eventAddress: UILabel!
+    @IBOutlet var imageView: UIImageView!
 
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         eventTitle?.text = event?.title
         city?.text = event?.city
+        eventAddress?.text = event?.address
+        eventDescription?.text = event?.description
+//        let url = NSURL(string: (event?.image)!)
+//        imageUI = NSData(contentsOf: url! as URL)
+//        if imageUI != nil {
+//            imageView?.image = UIImage(data: imageUI! as Data)
+//        }
+        
 
         
 //        if let id = self.event {

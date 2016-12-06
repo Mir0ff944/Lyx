@@ -68,7 +68,7 @@ class TableController: UITableViewController, UISearchBarDelegate {
 
         if let lable = cell.textLabel, let detail = cell.detailTextLabel {
             lable.text = Eventim.sharedInstance.getEvent(forIndex: indexPath.row).title
-            detail.text = Eventim.sharedInstance.getEvent(forIndex: indexPath.row).region
+            detail.text = Eventim.sharedInstance.getEvent(forIndex: indexPath.row).country
         }
         // Configure the cell...
 

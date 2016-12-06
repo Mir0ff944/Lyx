@@ -9,18 +9,16 @@
 import Foundation
 
 public  struct Event {
-    public var title: String
-    public var region: String
-    public var city: String
+    public var title: String?
+    public var city: String?
+    public var address: String?
+    public var url: String?
+    public var country: String?
+    public var description: String?
+    public var start: String?
+//    public var image: String?
 }
 
-//public struct Events {
-//    public var city_name: String
-//    public var title: String
-//    public var image: String
-//    public var venue: String
-//    public var start_time: String
-//}
 
 enum JSONError: Error{
     case InvalidURL(String)
@@ -40,9 +38,9 @@ public  class Eventim{
         Favorite = []
     }
     
-    public func getFavorites(atIndex index: Int ) throws -> Event{
-        return self.Favorite[index]
-    }
+//    public func getFavorites(atIndex index: Int ) throws -> Event{
+//        return self.Favorite[index]
+//    }
     
     public var count: Int {
         get {
@@ -66,20 +64,39 @@ public  class Eventim{
                 }
                 self.Favorite = []
                 for result in jsondata{
-                    print(result)
-                    guard let title = result["title"] as! String? else {
-                        throw JSONError.InvalidKey("Invalid Key")
+                   // print(result)
+                    guard let title = result["title"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid title")
                     }
-                    print(title)
-                    guard let region = result["region_name"] as! String? else {
-                        throw JSONError.InvalidKey("Invalid Key")
+//                    print(title!)
+                    guard let address = result["venue_address"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid address")
                     }
-                    print(region)
-                    guard let city = result["city_name"] as! String? else {
-                        throw JSONError.InvalidKey("Invalid Key")
+//                    print(address!)
+                    guard let city = result["city_name"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid city")
                     }
-                    print(city)
-                    self.Favorite.append(Event(title: title, region: region, city: city))
+//                    print(city!)
+                    guard let url = result["url"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid url")
+                    }
+//                    print(url!)
+                    guard let country = result["country_abbr2"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid country")
+                    }
+//                    print(country!)
+                    guard let description = result["description"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid description")
+                    }
+                    guard let start = result["start_time"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid start time")
+                    }
+//                    guard let image = result["image.medium.url"] as? String? else {
+//                        throw JSONError.InvalidKey("Invalid Key")
+//                    }
+//                    print(image!)
+                    
+                    self.Favorite.append(Event(title: title,  city: city,address: address, url: url, country: country, description: description, start: start))
                 }
             } catch {
                 print("erro thrown: \(error)")
