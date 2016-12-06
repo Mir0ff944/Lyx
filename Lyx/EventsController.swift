@@ -32,6 +32,7 @@ class EventsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
+            self.eventTitle?.text = self.event?.title
             self.city?.text = self.event?.city
             self.eventAddress?.text = self.event?.address
             self.eventDescription?.text = self.event?.description
