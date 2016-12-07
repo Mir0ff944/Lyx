@@ -16,7 +16,7 @@ public  struct Event {
     public var country: String?
     public var description: String?
     public var start: String?
-//    public var image: String?
+    public var image: String?
 }
 
 
@@ -48,7 +48,7 @@ public  class Eventim{
         }
     }
     
-    public func search(withText text:String, _ completion: @escaping ()->()) throws {
+    public func searchEvent(withText text:String, _ completion: @escaping ()->()) throws {
         let json = "https://lyx-api.herokuapp.com/events?l=\(text)"
         print(json)
         let session = URLSession.shared
@@ -60,7 +60,7 @@ public  class Eventim{
                 let json = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
                 print(json)
                 guard let jsondata = json["event"] as! [[String: Any]]? else {
-                    throw JSONError.InvalidKey("items")
+                    throw JSONError.InvalidKey("Invalid event")
                 }
                 self.Favorite = []
                 for result in jsondata{
@@ -91,12 +91,11 @@ public  class Eventim{
                     guard let start = result["start_time"] as? String? else {
                         throw JSONError.InvalidKey("Invalid start time")
                     }
-//                    guard let image = result["image.medium.url"] as? String? else {
-//                        throw JSONError.InvalidKey("Invalid Key")
-//                    }
-//                    print(image!)
-                    
-                    self.Favorite.append(Event(title: title,  city: city,address: address, url: url, country: country, description: description, start: start))
+                    let eventsimage = result["image"] as? [String: Any]
+                    let imageMedium = eventsimage?["medium"] as? [String: Any]
+                    let image = imageMedium?["url"] as? String?
+//                    print(image)
+                    self.Favorite.append(Event(title: title,  city: city,address: address, url: url, country: country, description: description,start: start,  image: image!))
                 }
             } catch {
                 print("erro thrown: \(error)")

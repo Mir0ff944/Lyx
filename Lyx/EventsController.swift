@@ -32,15 +32,17 @@ class EventsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
+            self.eventTitle?.text = self.event?.title
             self.city?.text = self.event?.city
             self.eventAddress?.text = self.event?.address
             self.eventDescription?.text = self.event?.description
-            //        let url = NSURL(string: (event?.image)!)
-            //        imageUI = NSData(contentsOf: url! as URL)
-            //        if imageUI != nil {
-            //            imageView?.image = UIImage(data: imageUI! as Data)
-            //        }
-            
+            if self.event?.image != nil {
+                let url = NSURL(string: (self.event?.image)!)
+                self.imageUI = NSData(contentsOf: url! as URL)
+                if self.imageUI != nil {
+                    self.imageView?.image = UIImage(data: self.imageUI! as Data)
+                }
+            }
             self.summaryViewHeight.constant = self.imageView.frame.height + 16
             self.descriptionViewHeight.constant = self.eventDescription.frame.height + 16
             print("summary Height \(self.summaryViewHeight)")
@@ -54,30 +56,6 @@ class EventsController: UIViewController {
             self.contentView.sizeToFit()
         }
 
-        
-//        if let id = self.event {
-//            print("ID: \(id)")
-//            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-//            try? Eventim.sharedInstance.getDetails(withID: id, { (Events) in
-//                DispatchQueue.main.async {
-//                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-//                    self.city.text = Events.city
-//                    self.eventAddress.text = Events.region
-//                   // self.summaryViewHeight.constant = self.eventImage.frame.height + 16
-//                    self.descriptionViewHeight.constant = self.eventDescription.frame.height + 16
-//                    print("summary Height \(self.summaryViewHeight)")
-//                    print("description height \(self.descriptionViewHeight)")
-//                    let frameHeight = self.summaryView.frame.height + self.descriptionView.frame.height + 25
-//                    print("frame height \(frameHeight)")
-//                    let size = CGSize(width: self.contentView.frame.width, height: frameHeight)
-//                    self.contentView.frame.size = size
-//                    self.scrollView.contentSize = size
-//                    self.summaryView.sizeToFit()
-//                    self.contentView.sizeToFit()
-//                    
-//                }
-//            })
-//        }
 
         // Do any additional setup after loading the view.
     }
