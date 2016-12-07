@@ -48,7 +48,7 @@ public  class Eventim{
         }
     }
     
-    public func search(withText text:String, _ completion: @escaping ()->()) throws {
+    public func searchEvent(withText text:String, _ completion: @escaping ()->()) throws {
         let json = "https://lyx-api.herokuapp.com/events?l=\(text)"
         print(json)
         let session = URLSession.shared
@@ -91,17 +91,11 @@ public  class Eventim{
                     guard let start = result["start_time"] as? String? else {
                         throw JSONError.InvalidKey("Invalid start time")
                     }
-                    guard let eventsimage = result["image"] as? [String: Any] else {
-                        throw JSONError.InvalidKey("Invalid description")
-                    }
-                    guard let imageMedium = eventsimage["medium"] as? [String: Any] else {
-                        throw JSONError.InvalidKey("Invalid description")
-                    }
-                    guard let image = imageMedium["url"] as? String else {
-                        throw JSONError.InvalidKey("Invalid description")
-                    }
-                    print(image)
-                    self.Favorite.append(Event(title: title,  city: city,address: address, url: url, country: country, description: description,start: start,  image: image))
+                    let eventsimage = result["image"] as? [String: Any]
+                    let imageMedium = eventsimage?["medium"] as? [String: Any]
+                    let image = imageMedium?["url"] as? String?
+//                    print(image)
+                    self.Favorite.append(Event(title: title,  city: city,address: address, url: url, country: country, description: description,start: start,  image: image!))
                 }
             } catch {
                 print("erro thrown: \(error)")

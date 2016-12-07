@@ -1,21 +1,17 @@
 //
-//  TableController.swift
+//  FavoritesController.swift
 //  Lyx
 //
-//  Created by Miroslav Ivanov on 03/12/2016.
+//  Created by Miroslav Ivanov on 07/12/2016.
 //  Copyright © 2016 Miroslav Ivanov. All rights reserved.
 //
 
 import UIKit
-import Events
 
-class TableController: UITableViewController, UISearchBarDelegate {
+class FavoritesController: UITableViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.searchBar.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -23,27 +19,7 @@ class TableController: UITableViewController, UISearchBarDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchQuery: String) {
-        print("Search: \(searchQuery)")
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let search = searchBar.text{
-            print("Search button pressed: \(search)")
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            try? Eventim.sharedInstance.searchEvent(withText: search, { () in
-                print("search complete")
-                DispatchQueue.main.async {
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                    self.tableView.reloadData()
-                    self.searchBar.resignFirstResponder()
-                }
-            })
-            
-        }
-    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,29 +29,23 @@ class TableController: UITableViewController, UISearchBarDelegate {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Eventim.sharedInstance.count
+        return 0
     }
-    
 
-
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Events", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        if let lable = cell.textLabel, let detail = cell.detailTextLabel {
-            lable.text = Eventim.sharedInstance.getEvent(forIndex: indexPath.row).title
-            detail.text = Eventim.sharedInstance.getEvent(forIndex: indexPath.row).start
-        }
         // Configure the cell...
 
         return cell
     }
-
-
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -112,30 +82,14 @@ class TableController: UITableViewController, UISearchBarDelegate {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //print(segue.identifier!)
-        if segue.identifier == "favoriteResult" {
-            print("segue: \(segue.identifier)")
-            if let IndexPath = self.tableView.indexPathForSelectedRow {
-                print("found row \(IndexPath.row)")
-                if let navigationController = segue.destination as? UINavigationController {
-                    if let eventsController = navigationController.topViewController as? EventsController {
-                        print("found Table Controller")
-                        eventsController.event = Eventim.sharedInstance.getEvent(forIndex: IndexPath.row)
-                       // eventsController.event = Eventim.sharedInstance.getEvent(forIndex: IndexPath.row).region
-                        
-                       // eventsController.event = try? Eventim.sharedInstance.getFavorites(atIndex: IndexPath.row).city
-                    }
-                }
-            }
-        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
+    */
 
 }

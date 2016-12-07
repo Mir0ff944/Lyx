@@ -17,6 +17,7 @@
 		D3259DB31DF718E500E1CDA4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259DB21DF718E500E1CDA4 /* NotificationController.swift */; };
 		D3259DB51DF718E500E1CDA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3259DB41DF718E500E1CDA4 /* Assets.xcassets */; };
 		D3259DB91DF718E500E1CDA4 /* LyxWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D3259D9B1DF718E400E1CDA4 /* LyxWatchApp.app */; };
+		D3259DD81DF89F6400E1CDA4 /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259DD71DF89F6400E1CDA4 /* FavoritesController.swift */; };
 		D383E53C1DF340C200DE9340 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D383E53B1DF340C200DE9340 /* TableController.swift */; };
 		D383E53E1DF340DF00DE9340 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D383E53D1DF340DF00DE9340 /* EventsController.swift */; };
 		D3F8DC171DF06BD000E3BC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F8DC161DF06BD000E3BC70 /* AppDelegate.swift */; };
@@ -129,6 +130,7 @@
 		D3259DB21DF718E500E1CDA4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D3259DB41DF718E500E1CDA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3259DB61DF718E500E1CDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3259DD71DF89F6400E1CDA4 /* FavoritesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
 		D383E53B1DF340C200DE9340 /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		D383E53D1DF340DF00DE9340 /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		D3F8DC131DF06BD000E3BC70 /* Lyx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +257,7 @@
 				D3F8DC1D1DF06BD000E3BC70 /* Lyx.xcdatamodeld */,
 				D383E53B1DF340C200DE9340 /* TableController.swift */,
 				D383E53D1DF340DF00DE9340 /* EventsController.swift */,
+				D3259DD71DF89F6400E1CDA4 /* FavoritesController.swift */,
 			);
 			path = Lyx;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 			files = (
 				D383E53C1DF340C200DE9340 /* TableController.swift in Sources */,
 				D3F8DC171DF06BD000E3BC70 /* AppDelegate.swift in Sources */,
+				D3259DD81DF89F6400E1CDA4 /* FavoritesController.swift in Sources */,
 				D383E53E1DF340DF00DE9340 /* EventsController.swift in Sources */,
 				D3F8DC1F1DF06BD000E3BC70 /* Lyx.xcdatamodeld in Sources */,
 			);
