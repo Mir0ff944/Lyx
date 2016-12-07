@@ -91,10 +91,16 @@ public  class Eventim{
                     guard let start = result["start_time"] as? String? else {
                         throw JSONError.InvalidKey("Invalid start time")
                     }
-                    let eventsimage = result["image"] as? [String: Any]
-                    let imageMedium = eventsimage?["medium"] as? [String: Any]
-                    let image = imageMedium?["url"] as? String
-                    
+                    guard let eventsimage = result["image"] as? [String: Any] else {
+                        throw JSONError.InvalidKey("Invalid description")
+                    }
+                    guard let imageMedium = eventsimage["medium"] as? [String: Any] else {
+                        throw JSONError.InvalidKey("Invalid description")
+                    }
+                    guard let image = imageMedium["url"] as? String else {
+                        throw JSONError.InvalidKey("Invalid description")
+                    }
+                    print(image)
                     self.Favorite.append(Event(title: title,  city: city,address: address, url: url, country: country, description: description,start: start,  image: image))
                 }
             } catch {
