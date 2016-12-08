@@ -24,6 +24,11 @@ class TableController: UITableViewController, UISearchBarDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    /// A msearch method storing data into an array
+    ///
+    /// - Parameters:
+    ///   - searchBar: search bar
+    ///   - searchQuery: search query
     func searchBar(_ searchBar: UISearchBar, textDidChange searchQuery: String) {
         print("Search: \(searchQuery)")
     }
@@ -63,6 +68,12 @@ class TableController: UITableViewController, UISearchBarDelegate {
     
 
 
+    /// Events Table View
+    ///
+    /// - Parameters:
+    ///   - tableView: tableView
+    ///   - indexPath: indexPath
+    /// - Returns: loads data into the cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Events", for: indexPath)
 
@@ -116,6 +127,11 @@ class TableController: UITableViewController, UISearchBarDelegate {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /// Passing data from the table view to the EventsController
+    ///
+    /// - Parameters:
+    ///   - segue: segue identtifier
+    ///   - sender: <#sender description#>
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //print(segue.identifier!)
         if segue.identifier == "favoriteResult" {
@@ -126,9 +142,6 @@ class TableController: UITableViewController, UISearchBarDelegate {
                     if let eventsController = navigationController.topViewController as? EventsController {
                         print("found Table Controller")
                         eventsController.event = Eventim.sharedInstance.getEvent(forIndex: IndexPath.row)
-                       // eventsController.event = Eventim.sharedInstance.getEvent(forIndex: IndexPath.row).region
-                        
-                       // eventsController.event = try? Eventim.sharedInstance.getFavorites(atIndex: IndexPath.row).city
                     }
                 }
             }

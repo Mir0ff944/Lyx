@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Events
 
 class FavoritesController: UITableViewController {
 
