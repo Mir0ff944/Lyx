@@ -17,6 +17,14 @@ public  struct Event {
     public var description: String?
     public var start: String?
     public var image: String?
+    public var performerName: String?
+    public var performerBio: String?
+    public var venue: String?
+}
+
+public struct Performers {
+    public var title: String?
+    public var genre: String?
 }
 
 
@@ -38,24 +46,30 @@ public  class Eventim{
         Favorite = []
     }
     
-//    public func getFavorites(atIndex index: Int ) throws -> Event{
-//        return self.Favorite[index]
-//    }
-    
+    /// number of events stored into the structure
     public var count: Int {
         get {
             return self.Favorite.count
         }
     }
     
+    
+    
+    /// API call, laoding events into the table view
+    ///
+    /// - Parameters:
+    ///   - text: search querey
+    ///   - completion: results of search
+    /// - Throws: throws missing parameters
+    
     public func searchEvent(withText text:String, _ completion: @escaping ()->()) throws {
         let json = "https://lyx-api.herokuapp.com/events?l=\(text)"
         print(json)
         let session = URLSession.shared
-        guard let performerURL = NSURL(string: json) else {
+        guard let eventURL = NSURL(string: json) else {
             throw JSONError.InvalidURL(json)
         }
-        session.dataTask(with: performerURL as URL, completionHandler: {(data, response, error) -> Void in
+        session.dataTask(with: eventURL as URL, completionHandler: {(data, response, error) -> Void in
             do{
                 let json = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
                 print(json)
@@ -68,23 +82,18 @@ public  class Eventim{
                     guard let title = result["title"] as? String? else {
                         throw JSONError.InvalidKey("Invalid title")
                     }
-//                    print(title!)
                     guard let address = result["venue_address"] as? String? else {
                         throw JSONError.InvalidKey("Invalid address")
                     }
-//                    print(address!)
                     guard let city = result["city_name"] as? String? else {
                         throw JSONError.InvalidKey("Invalid city")
                     }
-//                    print(city!)
                     guard let url = result["url"] as? String? else {
                         throw JSONError.InvalidKey("Invalid url")
                     }
-//                    print(url!)
                     guard let country = result["country_abbr2"] as? String? else {
                         throw JSONError.InvalidKey("Invalid country")
                     }
-//                    print(country!)
                     guard let description = result["description"] as? String? else {
                         throw JSONError.InvalidKey("Invalid description")
                     }
@@ -93,12 +102,24 @@ public  class Eventim{
                     }
                     let eventsimage = result["image"] as? [String: Any]
                     let imageMedium = eventsimage?["medium"] as? [String: Any]
-                    let image = imageMedium?["url"] as? String?
-//                    print(image)
-                    self.Favorite.append(Event(title: title,  city: city,address: address, url: url, country: country, description: description,start: start,  image: image!))
+                    guard let image = imageMedium?["url"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid image")
+                    }
+                    let performers = result["performers"] as? [String: Any]
+                    let performer = performers?["performer"] as? [String: Any]
+                    guard let performerName = performer?["name"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid performer name")
+                    }
+                    guard let performerBio = performer?["short_bio"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid performer bio")
+                    }
+                    guard let venue = result["venue_name"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid venue name")
+                    }
+                    self.Favorite.append(Event(title: title,  city: city,address: address, url: url, country: country, description: description,start: start,  image: image, performerName: performerName, performerBio: performerBio, venue: venue))
                 }
             } catch {
-                print("erro thrown: \(error)")
+                print("error thrown: \(error)")
             }
             completion()
         }).resume()
@@ -108,7 +129,4 @@ public  class Eventim{
         return Favorite[index]
     }
     
-//    public func  getDetails(withID id:String, _ completion: @escaping (Event)->()) throws {
-//        completion(Event( title: title?, region: "random url", city: "London"))
-//    }
 }

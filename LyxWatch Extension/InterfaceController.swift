@@ -1,21 +1,17 @@
 //
 //  InterfaceController.swift
-//  LyxWatchApp Extension
+//  LyxWatch Extension
 //
-//  Created by Miroslav Ivanov on 06/12/2016.
+//  Created by Miroslav Ivanov on 09/12/2016.
 //  Copyright © 2016 Miroslav Ivanov. All rights reserved.
 //
 
 import WatchKit
 import Foundation
-import Events
-
 
 
 class InterfaceController: WKInterfaceController {
 
-    @IBOutlet var favorite: WKInterfaceTable!
-    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
