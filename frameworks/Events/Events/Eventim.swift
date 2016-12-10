@@ -22,6 +22,11 @@ public  struct Event {
     public var venue: String?
 }
 
+public struct Performers {
+    public var title: String?
+    public var genre: String?
+}
+
 
 enum JSONError: Error{
     case InvalidURL(String)
@@ -48,6 +53,8 @@ public  class Eventim{
         }
     }
     
+    
+    
     /// API call, laoding events into the table view
     ///
     /// - Parameters:
@@ -59,10 +66,10 @@ public  class Eventim{
         let json = "https://lyx-api.herokuapp.com/events?l=\(text)"
         print(json)
         let session = URLSession.shared
-        guard let performerURL = NSURL(string: json) else {
+        guard let eventURL = NSURL(string: json) else {
             throw JSONError.InvalidURL(json)
         }
-        session.dataTask(with: performerURL as URL, completionHandler: {(data, response, error) -> Void in
+        session.dataTask(with: eventURL as URL, completionHandler: {(data, response, error) -> Void in
             do{
                 let json = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
                 print(json)
@@ -98,10 +105,6 @@ public  class Eventim{
                     guard let image = imageMedium?["url"] as? String? else {
                         throw JSONError.InvalidKey("Invalid image")
                     }
-
-//                    guard let eventsimage = result["iamge"] as? [String: Any], let imageMedium = eventsimage["medium"] as? [String: Any], let image = imageMedium["url"] as? String? else {
-//                        throw JSONError.InvalidKey("Invalid image")
-//                    }
                     let performers = result["performers"] as? [String: Any]
                     let performer = performers?["performer"] as? [String: Any]
                     guard let performerName = performer?["name"] as? String? else {
@@ -110,17 +113,13 @@ public  class Eventim{
                     guard let performerBio = performer?["short_bio"] as? String? else {
                         throw JSONError.InvalidKey("Invalid performer bio")
                     }
-
-//                    guard let performers = result["performers"] as? [String: Any], let performer = performers["performer"] as? [String: Any], let performerName = performer["name"] as? String?, let performerBio = performer["shrot_bio"] as? String? else {
-//                        throw JSONError.InvalidKey("Invalid performer")
-//                    }
                     guard let venue = result["venue_name"] as? String? else {
                         throw JSONError.InvalidKey("Invalid venue name")
                     }
                     self.Favorite.append(Event(title: title,  city: city,address: address, url: url, country: country, description: description,start: start,  image: image, performerName: performerName, performerBio: performerBio, venue: venue))
                 }
             } catch {
-                print("erro thrown: \(error)")
+                print("error thrown: \(error)")
             }
             completion()
         }).resume()
@@ -130,6 +129,4 @@ public  class Eventim{
         return Favorite[index]
     }
     
-
-//    public func getFavorites
 }
