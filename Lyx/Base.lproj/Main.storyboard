@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -118,18 +117,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorites" id="yfm-S8-SUs">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="qlZ-bo-yb2">
-                                <connections>
-                                    <action selector="addFavorite:" destination="ULr-ud-0Gb" id="zsV-s5-rqU"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Edit" id="j3H-H1-L3J">
-                                <connections>
-                                    <action selector="editBT:" destination="ULr-ud-0Gb" id="6zN-Vf-Q8x"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qlZ-bo-yb2">
+                            <connections>
+                                <action selector="addFavorite:" destination="ULr-ud-0Gb" id="zsV-s5-rqU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </tableViewController>
@@ -260,10 +252,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CxQ-4U-tA9" userLabel="descriptionView">
-                                                <rect key="frame" x="4" y="240" width="354" height="400"/>
+                                                <rect key="frame" x="4" y="240" width="354" height="500"/>
                                                 <subviews>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG0-yG-9vI">
-                                                        <rect key="frame" x="16" y="31" width="322" height="361"/>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG0-yG-9vI">
+                                                        <rect key="frame" x="16" y="31" width="322" height="461"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -286,7 +278,7 @@
                                                     <constraint firstAttribute="trailingMargin" secondItem="tG0-yG-9vI" secondAttribute="trailing" constant="8" id="BEG-Uz-S6O"/>
                                                     <constraint firstItem="tG0-yG-9vI" firstAttribute="leading" secondItem="CxQ-4U-tA9" secondAttribute="leadingMargin" constant="8" id="ECb-yA-chv"/>
                                                     <constraint firstAttribute="trailing" secondItem="FBg-Ql-Adc" secondAttribute="trailing" id="HXN-Hg-Ydq"/>
-                                                    <constraint firstAttribute="height" constant="400" id="MHs-gc-yv2"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="500" id="MHs-gc-yv2"/>
                                                     <constraint firstItem="FBg-Ql-Adc" firstAttribute="top" secondItem="CxQ-4U-tA9" secondAttribute="top" id="aSS-Z6-dRL"/>
                                                     <constraint firstItem="tG0-yG-9vI" firstAttribute="top" secondItem="CxQ-4U-tA9" secondAttribute="topMargin" constant="23" id="mv8-ob-LmZ"/>
                                                     <constraint firstAttribute="bottom" secondItem="tG0-yG-9vI" secondAttribute="bottom" constant="8" id="ya9-oZ-6eJ"/>
