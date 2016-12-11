@@ -12,8 +12,8 @@
 		D3259D471DF34A9500E1CDA4 /* Events.h in Headers */ = {isa = PBXBuildFile; fileRef = D3259D391DF34A9400E1CDA4 /* Events.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3259D511DF34AAF00E1CDA4 /* Eventim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259D501DF34AAF00E1CDA4 /* Eventim.swift */; };
 		D3259D521DF34AAF00E1CDA4 /* Eventim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259D501DF34AAF00E1CDA4 /* Eventim.swift */; };
+		D36E6F681DFE1ACB005296F2 /* Eventim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259D501DF34AAF00E1CDA4 /* Eventim.swift */; };
 		D36F24981DFDA1CD00FF4E5D /* Performers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36F24971DFDA1CD00FF4E5D /* Performers.swift */; };
-		D36F249E1DFDC8A300FF4E5D /* Eventim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259D501DF34AAF00E1CDA4 /* Eventim.swift */; };
 		D3FC7E9F1DFD932400FEC9B6 /* LyxWatchFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D3FC7E9D1DFD932400FEC9B6 /* LyxWatchFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3FC7EA71DFD943300FEC9B6 /* Events.h in Headers */ = {isa = PBXBuildFile; fileRef = D3259D391DF34A9400E1CDA4 /* Events.h */; };
 /* End PBXBuildFile section */
@@ -288,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D36F249E1DFDC8A300FF4E5D /* Eventim.swift in Sources */,
+				D36E6F681DFE1ACB005296F2 /* Eventim.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

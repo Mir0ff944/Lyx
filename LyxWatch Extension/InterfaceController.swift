@@ -14,11 +14,18 @@ import LyxWatchFramework
 
 class InterfaceController: WKInterfaceController {
 
-    @IBOutlet var eventTitle: WKInterfaceLabel!
-    @IBOutlet var eventDetails: WKInterfaceLabel!
-    @IBOutlet var eventDesc: WKInterfaceLabel!
+    @IBOutlet var performerTitle: WKInterfaceLabel!
+    @IBOutlet var performerDetails: WKInterfaceLabel!
+    @IBOutlet var performerDesc: WKInterfaceLabel!
     
-    var performer: Artist?
+    
+    var Performer: Artist? {
+        didSet {
+            performerDetails.setText(Performer?.genre)
+            performerDesc.setText(Performer?.id)
+            performerTitle.setText(Performer?.title)
+        }
+    }
 
     
     override func awake(withContext context: Any?) {
@@ -29,13 +36,13 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func willActivate() {
-        try? Eventim.sharedInstance.searchPerformer(withText: "Eminem", { () in
-            print("search complete")
-            self.eventTitle?.setText(self.performer?.title)
-            self.eventDetails.setText(self.performer?.ganre)
-            self.eventDesc?.setText(self.performer?.id)
-            
+        try? Eventim.sharedInstance.searchPerformer({ (performer) in
+            DispatchQueue.main.async {
+                self.Performer = performer
+            }
         })
+        
+        
         
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()

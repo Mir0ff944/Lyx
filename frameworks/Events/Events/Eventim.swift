@@ -23,9 +23,9 @@ public  struct Event {
 }
 
 public struct Artist {
-    public var title: String?
-    public var ganre: String?
-    public var id: String?
+    public var title: String
+    public var genre: String
+    public var id: String
 }
 
 
@@ -56,8 +56,8 @@ public  class Eventim{
         }
     }
     
-    public func searchPerformer(withText text:String, _ completion: @escaping ()->()) throws {
-        let json = "https://lyx-api.herokuapp.com/performer?p=\(text)"
+    public func searchPerformer( _ completion: @escaping (Artist)->()) throws {
+        let json = "https://lyx-api.herokuapp.com/performer?p=Hardwell"
         print(json)
         let session = URLSession.shared
         guard let performerURL = NSURL(string: json) else {
@@ -66,28 +66,26 @@ public  class Eventim{
         session.dataTask(with: performerURL as URL, completionHandler: {(data, response, error) -> Void in
             do{
                 let json = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
-                print (json)
+//                print (json)
                 guard let jsondata = json["performers"] as! [[String: Any]]? else {
                     throw JSONError.InvalidKey("Invalid event")
                 }
-                self.Performer = []
+                print(jsondata)
                 for result in jsondata {
-                    guard let title = result["title"] as? String? else {
-                        throw JSONError.InvalidKey("Invalid event")
-                    }
-                    guard let ganre = result["music_genre"] as? String? else {
-                        throw JSONError.InvalidKey("Invalid event")
-                    }
-                    guard let id = result["id"] as? String? else {
-                        throw JSONError.InvalidKey("Invalid event")
-                    }
-                    self.Performer.append(Artist(title: title, ganre: ganre, id: id))
+                    let title = result["title"] as? String!
+                    print(title!)
+                    let genre = result["music_genre"] as? String!
+                    print(genre!)
+                    let id = result["id"] as? String!
+                    print(id!)
+                    let performer = Artist(title: title!, genre: genre!, id:id!)
+                    completion(performer)
                 }
+
                 
             } catch {
                 print("error thrown: \(error)")
             }
-            completion()
         }).resume()
     }
     

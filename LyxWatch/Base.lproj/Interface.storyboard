@@ -14,16 +14,21 @@
             <objects>
                 <controller alwaysBounce="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="LyxWatch" customModuleProvider="target">
                     <items>
-                        <table alignment="left" id="JeW-Xq-gmq"/>
-                        <label width="135" alignment="left" text="Event Title" textAlignment="left" id="4s4-HY-qya"/>
-                        <label width="136" alignment="center" text="Event Details" id="AIo-Vw-Fcf"/>
-                        <label width="136" alignment="center" text="Event Desc" id="7Fz-CJ-JTr"/>
+                        <label width="136" alignment="left" text="PerformerTitle" textAlignment="left" id="4s4-HY-qya">
+                            <fontDescription key="font" type="italicSystem" pointSize="17"/>
+                        </label>
+                        <label width="136" alignment="left" text="Performer Details" id="AIo-Vw-Fcf">
+                            <fontDescription key="font" type="italicSystem" pointSize="13"/>
+                        </label>
+                        <label width="136" alignment="left" text="Performer Desc" id="7Fz-CJ-JTr">
+                            <fontDescription key="font" type="italicSystem" pointSize="11"/>
+                        </label>
                     </items>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     <connections>
-                        <outlet property="eventDesc" destination="7Fz-CJ-JTr" id="Sxd-I6-1DG"/>
-                        <outlet property="eventDetails" destination="AIo-Vw-Fcf" id="abR-Dh-fyh"/>
-                        <outlet property="eventTitle" destination="4s4-HY-qya" id="Ipd-VO-Idb"/>
+                        <outlet property="performerDesc" destination="7Fz-CJ-JTr" id="ePv-KA-B8q"/>
+                        <outlet property="performerDetails" destination="AIo-Vw-Fcf" id="eRq-wG-Zp2"/>
+                        <outlet property="performerTitle" destination="4s4-HY-qya" id="KKr-Yc-co9"/>
                     </connections>
                 </controller>
             </objects>
