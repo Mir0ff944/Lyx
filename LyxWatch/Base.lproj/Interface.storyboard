@@ -12,18 +12,22 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="LyxWatch" customModuleProvider="target">
+                <controller alwaysBounce="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="LyxWatch" customModuleProvider="target">
                     <items>
-                        <table alignment="left" id="JeW-Xq-gmq">
-                            <items>
-                                <tableRow identifier="favoriteCell" id="cfE-j7-DSO">
-                                    <group key="rootItem" width="1" alignment="left" id="VKY-MN-ozR"/>
-                                </tableRow>
-                            </items>
-                        </table>
+                        <table alignment="left" id="JeW-Xq-gmq"/>
+                        <label width="135" height="30" alignment="left" text="Event Title" textAlignment="left" id="4s4-HY-qya"/>
+                        <label width="136" alignment="center" text="Event Details" id="AIo-Vw-Fcf"/>
+                        <label width="136" alignment="center" text="Event Desc" id="7Fz-CJ-JTr"/>
                     </items>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <connections>
+                        <outlet property="eventDesc" destination="7Fz-CJ-JTr" id="Sxd-I6-1DG"/>
+                        <outlet property="eventDetails" destination="AIo-Vw-Fcf" id="abR-Dh-fyh"/>
+                        <outlet property="eventTitle" destination="4s4-HY-qya" id="Ipd-VO-Idb"/>
+                    </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="34" y="95"/>
         </scene>
     </scenes>
 </document>

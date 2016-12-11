@@ -26,6 +26,7 @@
 		D3FC7E531DFC9D8E00FEC9B6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC7E521DFC9D8E00FEC9B6 /* ExtensionDelegate.swift */; };
 		D3FC7E551DFC9D8E00FEC9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC7E541DFC9D8E00FEC9B6 /* Assets.xcassets */; };
 		D3FC7E591DFC9D8E00FEC9B6 /* LyxWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D3FC7E3F1DFC9D8D00FEC9B6 /* LyxWatch.app */; };
+		D3FC7EB51DFD962900FEC9B6 /* LyxWatchFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3FC7EAD1DFD94F100FEC9B6 /* LyxWatchFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,20 @@
 			remoteGlobalIDString = D3FC7E3E1DFC9D8D00FEC9B6;
 			remoteInfo = LyxWatch;
 		};
+		D3FC7EAC1DFD94F100FEC9B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3259D5E1DF35E3B00E1CDA4 /* Events.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3FC7E9B1DFD932400FEC9B6;
+			remoteInfo = LyxWatchFramework;
+		};
+		D3FC7EB61DFD962900FEC9B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3259D5E1DF35E3B00E1CDA4 /* Events.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D3FC7E9A1DFD932400FEC9B6;
+			remoteInfo = LyxWatchFramework;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -112,6 +127,17 @@
 				D3FC7E4C1DFC9D8E00FEC9B6 /* LyxWatch Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC7EB81DFD962900FEC9B6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D3FC7EB51DFD962900FEC9B6 /* LyxWatchFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -183,6 +209,7 @@
 			children = (
 				D3259D641DF35E3C00E1CDA4 /* Events.framework */,
 				D3259D661DF35E3C00E1CDA4 /* EventsTests.xctest */,
+				D3FC7EAD1DFD94F100FEC9B6 /* LyxWatchFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -351,10 +378,12 @@
 				D3FC7E471DFC9D8E00FEC9B6 /* Sources */,
 				D3FC7E481DFC9D8E00FEC9B6 /* Frameworks */,
 				D3FC7E491DFC9D8E00FEC9B6 /* Resources */,
+				D3FC7EB81DFD962900FEC9B6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D3FC7EB71DFD962900FEC9B6 /* PBXTargetDependency */,
 			);
 			name = "LyxWatch Extension";
 			productName = "LyxWatch Extension";
@@ -441,6 +470,13 @@
 			fileType = wrapper.cfbundle;
 			path = EventsTests.xctest;
 			remoteRef = D3259D651DF35E3C00E1CDA4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D3FC7EAD1DFD94F100FEC9B6 /* LyxWatchFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LyxWatchFramework.framework;
+			remoteRef = D3FC7EAC1DFD94F100FEC9B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -554,6 +590,11 @@
 			isa = PBXTargetDependency;
 			target = D3FC7E3E1DFC9D8D00FEC9B6 /* LyxWatch */;
 			targetProxy = D3FC7E571DFC9D8E00FEC9B6 /* PBXContainerItemProxy */;
+		};
+		D3FC7EB71DFD962900FEC9B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LyxWatchFramework;
+			targetProxy = D3FC7EB61DFD962900FEC9B6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -878,6 +919,7 @@
 				D3FC7E5D1DFC9D8E00FEC9B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3FC7E611DFC9D8E00FEC9B6 /* Build configuration list for PBXNativeTarget "LyxWatch" */ = {
 			isa = XCConfigurationList;
@@ -886,6 +928,7 @@
 				D3FC7E5B1DFC9D8E00FEC9B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

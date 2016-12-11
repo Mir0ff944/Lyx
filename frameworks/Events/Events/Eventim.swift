@@ -22,10 +22,10 @@ public  struct Event {
     public var venue: String?
 }
 
-public struct Performers {
-    public var title: String?
-    public var genre: String?
-}
+//public struct Performers {
+//    public var title: String?
+//    public var genre: String?
+//}
 
 
 enum JSONError: Error{
