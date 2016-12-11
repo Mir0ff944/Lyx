@@ -19,6 +19,7 @@ class FavoriteController: UITableViewController {
         let message = UIAlertController(title: "New favorite performer", message: "", preferredStyle: .alert)
         message.addTextField(configurationHandler: { (textField: UITextField) -> Void in
             textField.placeholder = "Performer name"
+            textField.accessibilityIdentifier = "nameField"
         })
 //        message.addTextField(configurationHandler: { (textField: UITextField) -> Void in
 //            textField.placeholder = "Genre"

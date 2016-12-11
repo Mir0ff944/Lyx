@@ -15,7 +15,7 @@
                 <controller alwaysBounce="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="LyxWatch" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="JeW-Xq-gmq"/>
-                        <label width="135" height="30" alignment="left" text="Event Title" textAlignment="left" id="4s4-HY-qya"/>
+                        <label width="135" alignment="left" text="Event Title" textAlignment="left" id="4s4-HY-qya"/>
                         <label width="136" alignment="center" text="Event Details" id="AIo-Vw-Fcf"/>
                         <label width="136" alignment="center" text="Event Desc" id="7Fz-CJ-JTr"/>
                     </items>
