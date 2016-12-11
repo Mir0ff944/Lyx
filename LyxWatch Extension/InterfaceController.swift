@@ -22,6 +22,9 @@ class InterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        self.eventTitle?.setText(self.event?.title)
+        self.eventDetails.setText(self.event?.address)
+        self.eventDesc?.setText(self.event?.description)
         
         // Configure interface objects here.
     }
@@ -30,11 +33,10 @@ class InterfaceController: WKInterfaceController {
         try? Eventim.sharedInstance.searchEvent(withText: "London", { () in
             print("search complete")
         })
-        self.eventTitle?.setText(self.event?.title)
-        self.eventDetails.setText(self.event?.address)
-        self.eventDesc?.setText(self.event?.description)
+        
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
     }
     
     override func didDeactivate() {
