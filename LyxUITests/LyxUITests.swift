@@ -16,9 +16,16 @@ class LyxUITests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+//        continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
+//        let app = XCUIApplication()
+//        app.navigationBars["Events in town"].buttons["Favorites"].tap()
+//        app.navigationBars["Favorites"].buttons["Add"].tap()
+//        app.textFields["nameField"].tap()
+//        app.textFields["nameField"].typeText("Hardwell")
+//        app.alerts["New favorite performer"].buttons["Add"].tap()
+//        continueAfterFailure = false
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -28,9 +35,44 @@ class LyxUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAddFavorite() {
+        let app = XCUIApplication()
+        let cells = app.tables.cells
+        app.navigationBars["Events in town"].buttons["Favorites"].tap()
+        app.navigationBars["Favorites"].buttons["Add"].tap()
+        app.textFields["nameField"].tap()
+        app.textFields["nameField"].typeText("Hardwell")
+        app.alerts["New favorite performer"].buttons["Add"].tap()
+        XCTAssertEqual(cells.count, 1, "found insted: \(cells.debugDescription)")
+        cells.element(boundBy: 0).tap()
+        app.navigationBars["Favorites"].buttons["Add"].tap()
+        app.textFields["nameField"].tap()
+        app.textFields["nameField"].typeText("Ariana")
+        app.alerts["New favorite performer"].buttons["Add"].tap()
+        XCTAssertEqual(cells.count, 2, "found insted: \(cells.debugDescription)")
+        XCTAssert(app.staticTexts["Ariana"].exists)
+    }
+
+    func testSwipeToDelete() {
+        let app = XCUIApplication()
+        let cells = app.tables.cells
+        XCTAssertEqual(cells.count,1 , "found insted: \(cells.debugDescription)")
+        cells.element(boundBy: 0).swipeLeft()
+        cells.element(boundBy: 0).buttons["Delete"].tap()
+        XCTAssertEqual(cells.count,0,  "found insted: \(cells.debugDescription)")
+    }
+    
+    func testSearchBar() {
+        let app = XCUIApplication()
+        let cells = app.tables.cells
+        app.tables.searchFields["Search"].tap()
+        app.searchFields["Search"].tap()
+        app.searchFields["Search"].typeText("Sofia")
+        app.keyboards.buttons["Done"].tap()
+        cells.element(boundBy: 0).tap()
+        app.navigationBars["Events"].buttons["Favorites"].tap()
+        
+        
     }
     
 }

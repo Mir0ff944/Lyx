@@ -9,14 +9,6 @@
 /* Begin PBXBuildFile section */
 		D3259D831DF37A0100E1CDA4 /* Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3259D641DF35E3C00E1CDA4 /* Events.framework */; };
 		D3259D841DF37A0100E1CDA4 /* Events.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3259D641DF35E3C00E1CDA4 /* Events.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D3259D9F1DF718E400E1CDA4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3259D9D1DF718E400E1CDA4 /* Interface.storyboard */; };
-		D3259DA11DF718E400E1CDA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3259DA01DF718E400E1CDA4 /* Assets.xcassets */; };
-		D3259DA81DF718E500E1CDA4 /* LyxWatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3259DA71DF718E500E1CDA4 /* LyxWatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D3259DAF1DF718E500E1CDA4 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259DAE1DF718E500E1CDA4 /* InterfaceController.swift */; };
-		D3259DB11DF718E500E1CDA4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259DB01DF718E500E1CDA4 /* ExtensionDelegate.swift */; };
-		D3259DB31DF718E500E1CDA4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259DB21DF718E500E1CDA4 /* NotificationController.swift */; };
-		D3259DB51DF718E500E1CDA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3259DB41DF718E500E1CDA4 /* Assets.xcassets */; };
-		D3259DB91DF718E500E1CDA4 /* LyxWatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D3259D9B1DF718E400E1CDA4 /* LyxWatchApp.app */; };
 		D383E53C1DF340C200DE9340 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D383E53B1DF340C200DE9340 /* TableController.swift */; };
 		D383E53E1DF340DF00DE9340 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D383E53D1DF340DF00DE9340 /* EventsController.swift */; };
 		D3F8DC171DF06BD000E3BC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F8DC161DF06BD000E3BC70 /* AppDelegate.swift */; };
@@ -27,10 +19,14 @@
 		D3F8DC2F1DF06BD000E3BC70 /* LyxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F8DC2E1DF06BD000E3BC70 /* LyxTests.swift */; };
 		D3F8DC3A1DF06BD000E3BC70 /* LyxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F8DC391DF06BD000E3BC70 /* LyxUITests.swift */; };
 		D3FC7DD11DFC258C00FEC9B6 /* FavoriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC7DD01DFC258C00FEC9B6 /* FavoriteController.swift */; };
-		D3FC7E031DFC951C00FEC9B6 /* Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3259D641DF35E3C00E1CDA4 /* Events.framework */; };
-		D3FC7E051DFC952200FEC9B6 /* Events.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3259D641DF35E3C00E1CDA4 /* Events.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D3FC7E091DFC953E00FEC9B6 /* Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3259D641DF35E3C00E1CDA4 /* Events.framework */; };
-		D3FC7E0A1DFC953E00FEC9B6 /* Events.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3259D641DF35E3C00E1CDA4 /* Events.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3FC7E431DFC9D8D00FEC9B6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FC7E411DFC9D8D00FEC9B6 /* Interface.storyboard */; };
+		D3FC7E451DFC9D8D00FEC9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC7E441DFC9D8D00FEC9B6 /* Assets.xcassets */; };
+		D3FC7E4C1DFC9D8E00FEC9B6 /* LyxWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3FC7E4B1DFC9D8E00FEC9B6 /* LyxWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3FC7E511DFC9D8E00FEC9B6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC7E501DFC9D8E00FEC9B6 /* InterfaceController.swift */; };
+		D3FC7E531DFC9D8E00FEC9B6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC7E521DFC9D8E00FEC9B6 /* ExtensionDelegate.swift */; };
+		D3FC7E551DFC9D8E00FEC9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FC7E541DFC9D8E00FEC9B6 /* Assets.xcassets */; };
+		D3FC7E591DFC9D8E00FEC9B6 /* LyxWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D3FC7E3F1DFC9D8D00FEC9B6 /* LyxWatch.app */; };
+		D3FC7EB51DFD962900FEC9B6 /* LyxWatchFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3FC7EAD1DFD94F100FEC9B6 /* LyxWatchFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,20 +51,6 @@
 			remoteGlobalIDString = D3259D351DF34A9400E1CDA4;
 			remoteInfo = Events;
 		};
-		D3259DA91DF718E500E1CDA4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D3F8DC0B1DF06BD000E3BC70 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D3259DA61DF718E500E1CDA4;
-			remoteInfo = "LyxWatchApp Extension";
-		};
-		D3259DB71DF718E500E1CDA4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D3F8DC0B1DF06BD000E3BC70 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D3259D9A1DF718E400E1CDA4;
-			remoteInfo = LyxWatchApp;
-		};
 		D3F8DC2B1DF06BD000E3BC70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D3F8DC0B1DF06BD000E3BC70 /* Project object */;
@@ -83,19 +65,33 @@
 			remoteGlobalIDString = D3F8DC121DF06BD000E3BC70;
 			remoteInfo = Lyx;
 		};
-		D3FC7E061DFC952200FEC9B6 /* PBXContainerItemProxy */ = {
+		D3FC7E4D1DFC9D8E00FEC9B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D3259D5E1DF35E3B00E1CDA4 /* Events.xcodeproj */;
+			containerPortal = D3F8DC0B1DF06BD000E3BC70 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D3259D351DF34A9400E1CDA4;
-			remoteInfo = Events;
+			remoteGlobalIDString = D3FC7E4A1DFC9D8E00FEC9B6;
+			remoteInfo = "LyxWatch Extension";
 		};
-		D3FC7E0B1DFC953E00FEC9B6 /* PBXContainerItemProxy */ = {
+		D3FC7E571DFC9D8E00FEC9B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3F8DC0B1DF06BD000E3BC70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3FC7E3E1DFC9D8D00FEC9B6;
+			remoteInfo = LyxWatch;
+		};
+		D3FC7EAC1DFD94F100FEC9B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3259D5E1DF35E3B00E1CDA4 /* Events.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3FC7E9B1DFD932400FEC9B6;
+			remoteInfo = LyxWatchFramework;
+		};
+		D3FC7EB61DFD962900FEC9B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D3259D5E1DF35E3B00E1CDA4 /* Events.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D3259D351DF34A9400E1CDA4;
-			remoteInfo = Events;
+			remoteGlobalIDString = D3FC7E9A1DFD932400FEC9B6;
+			remoteInfo = LyxWatchFramework;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -111,46 +107,35 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3259DC01DF718E500E1CDA4 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				D3259DA81DF718E500E1CDA4 /* LyxWatchApp Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D3259DC21DF718E500E1CDA4 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				D3259DB91DF718E500E1CDA4 /* LyxWatchApp.app in Embed Watch Content */,
+				D3FC7E591DFC9D8E00FEC9B6 /* LyxWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3FC7E081DFC952200FEC9B6 /* Embed Frameworks */ = {
+		D3FC7E601DFC9D8E00FEC9B6 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 13;
 			files = (
-				D3FC7E051DFC952200FEC9B6 /* Events.framework in Embed Frameworks */,
+				D3FC7E4C1DFC9D8E00FEC9B6 /* LyxWatch Extension.appex in Embed App Extensions */,
 			);
-			name = "Embed Frameworks";
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3FC7E0E1DFC953F00FEC9B6 /* Embed Frameworks */ = {
+		D3FC7EB81DFD962900FEC9B6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D3FC7E0A1DFC953E00FEC9B6 /* Events.framework in Embed Frameworks */,
+				D3FC7EB51DFD962900FEC9B6 /* LyxWatchFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,17 +144,6 @@
 
 /* Begin PBXFileReference section */
 		D3259D5E1DF35E3B00E1CDA4 /* Events.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Events.xcodeproj; path = frameworks/Events/Events.xcodeproj; sourceTree = "<group>"; };
-		D3259D9B1DF718E400E1CDA4 /* LyxWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyxWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3259D9E1DF718E400E1CDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		D3259DA01DF718E400E1CDA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D3259DA21DF718E400E1CDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3259DA71DF718E500E1CDA4 /* LyxWatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LyxWatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3259DAD1DF718E500E1CDA4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		D3259DAE1DF718E500E1CDA4 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		D3259DB01DF718E500E1CDA4 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		D3259DB21DF718E500E1CDA4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		D3259DB41DF718E500E1CDA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D3259DB61DF718E500E1CDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D383E53B1DF340C200DE9340 /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		D383E53D1DF340DF00DE9340 /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		D3F8DC131DF06BD000E3BC70 /* Lyx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,17 +160,18 @@
 		D3F8DC391DF06BD000E3BC70 /* LyxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyxUITests.swift; sourceTree = "<group>"; };
 		D3F8DC3B1DF06BD000E3BC70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3FC7DD01DFC258C00FEC9B6 /* FavoriteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteController.swift; sourceTree = "<group>"; };
+		D3FC7E3F1DFC9D8D00FEC9B6 /* LyxWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyxWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FC7E421DFC9D8D00FEC9B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D3FC7E441DFC9D8D00FEC9B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3FC7E461DFC9D8D00FEC9B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FC7E4B1DFC9D8E00FEC9B6 /* LyxWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LyxWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FC7E501DFC9D8E00FEC9B6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D3FC7E521DFC9D8E00FEC9B6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D3FC7E541DFC9D8E00FEC9B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3FC7E561DFC9D8E00FEC9B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D3259DA41DF718E500E1CDA4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3FC7E031DFC951C00FEC9B6 /* Events.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D3F8DC101DF06BD000E3BC70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,11 +194,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3FC7E0D1DFC953E00FEC9B6 /* Frameworks */ = {
+		D3FC7E481DFC9D8E00FEC9B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3FC7E091DFC953E00FEC9B6 /* Events.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,39 +209,9 @@
 			children = (
 				D3259D641DF35E3C00E1CDA4 /* Events.framework */,
 				D3259D661DF35E3C00E1CDA4 /* EventsTests.xctest */,
+				D3FC7EAD1DFD94F100FEC9B6 /* LyxWatchFramework.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D3259D9C1DF718E400E1CDA4 /* LyxWatchApp */ = {
-			isa = PBXGroup;
-			children = (
-				D3259D9D1DF718E400E1CDA4 /* Interface.storyboard */,
-				D3259DA01DF718E400E1CDA4 /* Assets.xcassets */,
-				D3259DA21DF718E400E1CDA4 /* Info.plist */,
-			);
-			path = LyxWatchApp;
-			sourceTree = "<group>";
-		};
-		D3259DAB1DF718E500E1CDA4 /* LyxWatchApp Extension */ = {
-			isa = PBXGroup;
-			children = (
-				D3259DAE1DF718E500E1CDA4 /* InterfaceController.swift */,
-				D3259DB01DF718E500E1CDA4 /* ExtensionDelegate.swift */,
-				D3259DB21DF718E500E1CDA4 /* NotificationController.swift */,
-				D3259DB41DF718E500E1CDA4 /* Assets.xcassets */,
-				D3259DB61DF718E500E1CDA4 /* Info.plist */,
-				D3259DAC1DF718E500E1CDA4 /* Supporting Files */,
-			);
-			path = "LyxWatchApp Extension";
-			sourceTree = "<group>";
-		};
-		D3259DAC1DF718E500E1CDA4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D3259DAD1DF718E500E1CDA4 /* PushNotificationPayload.apns */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D3F8DC0A1DF06BD000E3BC70 = {
@@ -277,8 +221,8 @@
 				D3F8DC151DF06BD000E3BC70 /* Lyx */,
 				D3F8DC2D1DF06BD000E3BC70 /* LyxTests */,
 				D3F8DC381DF06BD000E3BC70 /* LyxUITests */,
-				D3259D9C1DF718E400E1CDA4 /* LyxWatchApp */,
-				D3259DAB1DF718E500E1CDA4 /* LyxWatchApp Extension */,
+				D3FC7E401DFC9D8D00FEC9B6 /* LyxWatch */,
+				D3FC7E4F1DFC9D8E00FEC9B6 /* LyxWatch Extension */,
 				D3F8DC141DF06BD000E3BC70 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -289,8 +233,8 @@
 				D3F8DC131DF06BD000E3BC70 /* Lyx.app */,
 				D3F8DC2A1DF06BD000E3BC70 /* LyxTests.xctest */,
 				D3F8DC351DF06BD000E3BC70 /* LyxUITests.xctest */,
-				D3259D9B1DF718E400E1CDA4 /* LyxWatchApp.app */,
-				D3259DA71DF718E500E1CDA4 /* LyxWatchApp Extension.appex */,
+				D3FC7E3F1DFC9D8D00FEC9B6 /* LyxWatch.app */,
+				D3FC7E4B1DFC9D8E00FEC9B6 /* LyxWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -329,48 +273,30 @@
 			path = LyxUITests;
 			sourceTree = "<group>";
 		};
+		D3FC7E401DFC9D8D00FEC9B6 /* LyxWatch */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC7E411DFC9D8D00FEC9B6 /* Interface.storyboard */,
+				D3FC7E441DFC9D8D00FEC9B6 /* Assets.xcassets */,
+				D3FC7E461DFC9D8D00FEC9B6 /* Info.plist */,
+			);
+			path = LyxWatch;
+			sourceTree = "<group>";
+		};
+		D3FC7E4F1DFC9D8E00FEC9B6 /* LyxWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC7E501DFC9D8E00FEC9B6 /* InterfaceController.swift */,
+				D3FC7E521DFC9D8E00FEC9B6 /* ExtensionDelegate.swift */,
+				D3FC7E541DFC9D8E00FEC9B6 /* Assets.xcassets */,
+				D3FC7E561DFC9D8E00FEC9B6 /* Info.plist */,
+			);
+			path = "LyxWatch Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D3259D9A1DF718E400E1CDA4 /* LyxWatchApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D3259DC11DF718E500E1CDA4 /* Build configuration list for PBXNativeTarget "LyxWatchApp" */;
-			buildPhases = (
-				D3259D991DF718E400E1CDA4 /* Resources */,
-				D3259DC01DF718E500E1CDA4 /* Embed App Extensions */,
-				D3FC7E0D1DFC953E00FEC9B6 /* Frameworks */,
-				D3FC7E0E1DFC953F00FEC9B6 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D3259DAA1DF718E500E1CDA4 /* PBXTargetDependency */,
-				D3FC7E0C1DFC953E00FEC9B6 /* PBXTargetDependency */,
-			);
-			name = LyxWatchApp;
-			productName = LyxWatchApp;
-			productReference = D3259D9B1DF718E400E1CDA4 /* LyxWatchApp.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		D3259DA61DF718E500E1CDA4 /* LyxWatchApp Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D3259DBF1DF718E500E1CDA4 /* Build configuration list for PBXNativeTarget "LyxWatchApp Extension" */;
-			buildPhases = (
-				D3259DA31DF718E500E1CDA4 /* Sources */,
-				D3259DA41DF718E500E1CDA4 /* Frameworks */,
-				D3259DA51DF718E500E1CDA4 /* Resources */,
-				D3FC7E081DFC952200FEC9B6 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D3FC7E071DFC952200FEC9B6 /* PBXTargetDependency */,
-			);
-			name = "LyxWatchApp Extension";
-			productName = "LyxWatchApp Extension";
-			productReference = D3259DA71DF718E500E1CDA4 /* LyxWatchApp Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 		D3F8DC121DF06BD000E3BC70 /* Lyx */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3F8DC3E1DF06BD000E3BC70 /* Build configuration list for PBXNativeTarget "Lyx" */;
@@ -385,7 +311,7 @@
 			);
 			dependencies = (
 				D3259D861DF37A0100E1CDA4 /* PBXTargetDependency */,
-				D3259DB81DF718E500E1CDA4 /* PBXTargetDependency */,
+				D3FC7E581DFC9D8E00FEC9B6 /* PBXTargetDependency */,
 			);
 			name = Lyx;
 			productName = Lyx;
@@ -428,6 +354,42 @@
 			productReference = D3F8DC351DF06BD000E3BC70 /* LyxUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D3FC7E3E1DFC9D8D00FEC9B6 /* LyxWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FC7E611DFC9D8E00FEC9B6 /* Build configuration list for PBXNativeTarget "LyxWatch" */;
+			buildPhases = (
+				D3FC7E3D1DFC9D8D00FEC9B6 /* Resources */,
+				D3FC7E601DFC9D8E00FEC9B6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3FC7E4E1DFC9D8E00FEC9B6 /* PBXTargetDependency */,
+			);
+			name = LyxWatch;
+			productName = LyxWatch;
+			productReference = D3FC7E3F1DFC9D8D00FEC9B6 /* LyxWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D3FC7E4A1DFC9D8E00FEC9B6 /* LyxWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FC7E5F1DFC9D8E00FEC9B6 /* Build configuration list for PBXNativeTarget "LyxWatch Extension" */;
+			buildPhases = (
+				D3FC7E471DFC9D8E00FEC9B6 /* Sources */,
+				D3FC7E481DFC9D8E00FEC9B6 /* Frameworks */,
+				D3FC7E491DFC9D8E00FEC9B6 /* Resources */,
+				D3FC7EB81DFD962900FEC9B6 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3FC7EB71DFD962900FEC9B6 /* PBXTargetDependency */,
+			);
+			name = "LyxWatch Extension";
+			productName = "LyxWatch Extension";
+			productReference = D3FC7E4B1DFC9D8E00FEC9B6 /* LyxWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -438,16 +400,6 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Miroslav Ivanov";
 				TargetAttributes = {
-					D3259D9A1DF718E400E1CDA4 = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 3PCKP334RB;
-						ProvisioningStyle = Automatic;
-					};
-					D3259DA61DF718E500E1CDA4 = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 3PCKP334RB;
-						ProvisioningStyle = Automatic;
-					};
 					D3F8DC121DF06BD000E3BC70 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 3PCKP334RB;
@@ -464,6 +416,16 @@
 						DevelopmentTeam = 3PCKP334RB;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D3F8DC121DF06BD000E3BC70;
+					};
+					D3FC7E3E1DFC9D8D00FEC9B6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3PCKP334RB;
+						ProvisioningStyle = Automatic;
+					};
+					D3FC7E4A1DFC9D8E00FEC9B6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3PCKP334RB;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -489,8 +451,8 @@
 				D3F8DC121DF06BD000E3BC70 /* Lyx */,
 				D3F8DC291DF06BD000E3BC70 /* LyxTests */,
 				D3F8DC341DF06BD000E3BC70 /* LyxUITests */,
-				D3259D9A1DF718E400E1CDA4 /* LyxWatchApp */,
-				D3259DA61DF718E500E1CDA4 /* LyxWatchApp Extension */,
+				D3FC7E3E1DFC9D8D00FEC9B6 /* LyxWatch */,
+				D3FC7E4A1DFC9D8E00FEC9B6 /* LyxWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -510,26 +472,16 @@
 			remoteRef = D3259D651DF35E3C00E1CDA4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		D3FC7EAD1DFD94F100FEC9B6 /* LyxWatchFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LyxWatchFramework.framework;
+			remoteRef = D3FC7EAC1DFD94F100FEC9B6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D3259D991DF718E400E1CDA4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3259DA11DF718E400E1CDA4 /* Assets.xcassets in Resources */,
-				D3259D9F1DF718E400E1CDA4 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D3259DA51DF718E500E1CDA4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3259DB51DF718E500E1CDA4 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D3F8DC111DF06BD000E3BC70 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -554,19 +506,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		D3259DA31DF718E500E1CDA4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		D3FC7E3D1DFC9D8D00FEC9B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3259DB31DF718E500E1CDA4 /* NotificationController.swift in Sources */,
-				D3259DB11DF718E500E1CDA4 /* ExtensionDelegate.swift in Sources */,
-				D3259DAF1DF718E500E1CDA4 /* InterfaceController.swift in Sources */,
+				D3FC7E451DFC9D8D00FEC9B6 /* Assets.xcassets in Resources */,
+				D3FC7E431DFC9D8D00FEC9B6 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3FC7E491DFC9D8E00FEC9B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FC7E551DFC9D8E00FEC9B6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		D3F8DC0F1DF06BD000E3BC70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -595,6 +554,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3FC7E471DFC9D8E00FEC9B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FC7E531DFC9D8E00FEC9B6 /* ExtensionDelegate.swift in Sources */,
+				D3FC7E511DFC9D8E00FEC9B6 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -602,16 +570,6 @@
 			isa = PBXTargetDependency;
 			name = Events;
 			targetProxy = D3259D851DF37A0100E1CDA4 /* PBXContainerItemProxy */;
-		};
-		D3259DAA1DF718E500E1CDA4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D3259DA61DF718E500E1CDA4 /* LyxWatchApp Extension */;
-			targetProxy = D3259DA91DF718E500E1CDA4 /* PBXContainerItemProxy */;
-		};
-		D3259DB81DF718E500E1CDA4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D3259D9A1DF718E400E1CDA4 /* LyxWatchApp */;
-			targetProxy = D3259DB71DF718E500E1CDA4 /* PBXContainerItemProxy */;
 		};
 		D3F8DC2C1DF06BD000E3BC70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -623,27 +581,24 @@
 			target = D3F8DC121DF06BD000E3BC70 /* Lyx */;
 			targetProxy = D3F8DC361DF06BD000E3BC70 /* PBXContainerItemProxy */;
 		};
-		D3FC7E071DFC952200FEC9B6 /* PBXTargetDependency */ = {
+		D3FC7E4E1DFC9D8E00FEC9B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Events;
-			targetProxy = D3FC7E061DFC952200FEC9B6 /* PBXContainerItemProxy */;
+			target = D3FC7E4A1DFC9D8E00FEC9B6 /* LyxWatch Extension */;
+			targetProxy = D3FC7E4D1DFC9D8E00FEC9B6 /* PBXContainerItemProxy */;
 		};
-		D3FC7E0C1DFC953E00FEC9B6 /* PBXTargetDependency */ = {
+		D3FC7E581DFC9D8E00FEC9B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Events;
-			targetProxy = D3FC7E0B1DFC953E00FEC9B6 /* PBXContainerItemProxy */;
+			target = D3FC7E3E1DFC9D8D00FEC9B6 /* LyxWatch */;
+			targetProxy = D3FC7E571DFC9D8E00FEC9B6 /* PBXContainerItemProxy */;
+		};
+		D3FC7EB71DFD962900FEC9B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LyxWatchFramework;
+			targetProxy = D3FC7EB61DFD962900FEC9B6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D3259D9D1DF718E400E1CDA4 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3259D9E1DF718E400E1CDA4 /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 		D3F8DC1A1DF06BD000E3BC70 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -660,81 +615,17 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		D3FC7E411DFC9D8D00FEC9B6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3FC7E421DFC9D8D00FEC9B6 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D3259DBA1DF718E500E1CDA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3PCKP334RB;
-				IBSC_MODULE = LyxWatchApp_Extension;
-				INFOPLIST_FILE = LyxWatchApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovCorp.Lyx.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
-			};
-			name = Debug;
-		};
-		D3259DBB1DF718E500E1CDA4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3PCKP334RB;
-				IBSC_MODULE = LyxWatchApp_Extension;
-				INFOPLIST_FILE = LyxWatchApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovCorp.Lyx.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
-			};
-			name = Release;
-		};
-		D3259DBC1DF718E500E1CDA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = 3PCKP334RB;
-				INFOPLIST_FILE = "LyxWatchApp Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovCorp.Lyx.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
-			};
-			name = Debug;
-		};
-		D3259DBD1DF718E500E1CDA4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = 3PCKP334RB;
-				INFOPLIST_FILE = "LyxWatchApp Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovCorp.Lyx.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
-			};
-			name = Release;
-		};
 		D3F8DC3C1DF06BD000E3BC70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -912,27 +803,79 @@
 			};
 			name = Release;
 		};
+		D3FC7E5A1DFC9D8E00FEC9B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3PCKP334RB;
+				IBSC_MODULE = LyxWatch_Extension;
+				INFOPLIST_FILE = LyxWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovCorp.Lyx.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		D3FC7E5B1DFC9D8E00FEC9B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3PCKP334RB;
+				IBSC_MODULE = LyxWatch_Extension;
+				INFOPLIST_FILE = LyxWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovCorp.Lyx.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		D3FC7E5C1DFC9D8E00FEC9B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 3PCKP334RB;
+				INFOPLIST_FILE = "LyxWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovCorp.Lyx.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		D3FC7E5D1DFC9D8E00FEC9B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 3PCKP334RB;
+				INFOPLIST_FILE = "LyxWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovCorp.Lyx.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D3259DBF1DF718E500E1CDA4 /* Build configuration list for PBXNativeTarget "LyxWatchApp Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D3259DBC1DF718E500E1CDA4 /* Debug */,
-				D3259DBD1DF718E500E1CDA4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D3259DC11DF718E500E1CDA4 /* Build configuration list for PBXNativeTarget "LyxWatchApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D3259DBA1DF718E500E1CDA4 /* Debug */,
-				D3259DBB1DF718E500E1CDA4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D3F8DC0E1DF06BD000E3BC70 /* Build configuration list for PBXProject "Lyx" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -965,6 +908,24 @@
 			buildConfigurations = (
 				D3F8DC451DF06BD000E3BC70 /* Debug */,
 				D3F8DC461DF06BD000E3BC70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FC7E5F1DFC9D8E00FEC9B6 /* Build configuration list for PBXNativeTarget "LyxWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FC7E5C1DFC9D8E00FEC9B6 /* Debug */,
+				D3FC7E5D1DFC9D8E00FEC9B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FC7E611DFC9D8E00FEC9B6 /* Build configuration list for PBXNativeTarget "LyxWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FC7E5A1DFC9D8E00FEC9B6 /* Debug */,
+				D3FC7E5B1DFC9D8E00FEC9B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

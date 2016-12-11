@@ -22,9 +22,10 @@ public  struct Event {
     public var venue: String?
 }
 
-public struct Performers {
+public struct Artist {
     public var title: String?
-    public var genre: String?
+    public var ganre: String?
+    public var id: String?
 }
 
 
@@ -41,9 +42,11 @@ public  class Eventim{
     public static var sharedInstance = Eventim()
     
     var Favorite: [Event]
+    var Performer: [Artist]
     
     public init() {
         Favorite = []
+        Performer = []
     }
     
     /// number of events stored into the structure
@@ -51,6 +54,45 @@ public  class Eventim{
         get {
             return self.Favorite.count
         }
+    }
+    
+    public func searchPerformer(withText text:String, _ completion: @escaping ()->()) throws {
+        let json = "https://lyx-api.herokuapp.com/performer?p=\(text)"
+        print(json)
+        let session = URLSession.shared
+        guard let performerURL = NSURL(string: json) else {
+            throw JSONError.InvalidURL(json)
+        }
+        session.dataTask(with: performerURL as URL, completionHandler: {(data, response, error) -> Void in
+            do{
+                let json = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
+                print (json)
+                guard let jsondata = json["performers"] as! [[String: Any]]? else {
+                    throw JSONError.InvalidKey("Invalid event")
+                }
+                self.Performer = []
+                for result in jsondata {
+                    guard let title = result["title"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid event")
+                    }
+                    guard let ganre = result["music_genre"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid event")
+                    }
+                    guard let id = result["id"] as? String? else {
+                        throw JSONError.InvalidKey("Invalid event")
+                    }
+                    self.Performer.append(Artist(title: title, ganre: ganre, id: id))
+                }
+                
+            } catch {
+                print("error thrown: \(error)")
+            }
+            completion()
+        }).resume()
+    }
+    
+    public func getPerformer(forIndex index: Int) -> Artist {
+        return Performer[index]
     }
     
     

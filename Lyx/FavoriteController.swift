@@ -14,32 +14,20 @@ class FavoriteController: UITableViewController {
     
 
     var favorites:[String] = []
-    var ganre:[String] = []
 
-    @IBAction func editBT(_ sender: UIBarButtonItem) {
-        self.isEditing = !self.isEditing
-        print("editmode: \(self.isEditing)")
-        if self.isEditing {
-            sender.title = "Done"
-        } else {
-            sender.title = "Edit"
-        }
-        self.saveList()
-    }
     @IBAction func addFavorite(_ sender: UIBarButtonItem) {
         let message = UIAlertController(title: "New favorite performer", message: "", preferredStyle: .alert)
         message.addTextField(configurationHandler: { (textField: UITextField) -> Void in
             textField.placeholder = "Performer name"
+            textField.accessibilityIdentifier = "nameField"
         })
-        message.addTextField(configurationHandler: { (textField: UITextField) -> Void in
-            textField.placeholder = "Genre"
-        })
+//        message.addTextField(configurationHandler: { (textField: UITextField) -> Void in
+//            textField.placeholder = "Genre"
+//        })
         message.addAction(UIAlertAction(title: "Add", style: .default, handler: {(action)  in
             if let textMessage = message.textFields {
                 let name = textMessage[0].text
-                let ganre = textMessage[1].text
                 self.favorites.append(name!)
-                self.ganre.append(ganre!)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -53,7 +41,6 @@ class FavoriteController: UITableViewController {
     
     func saveList() {
         let saved = UserDefaults.standard
-        saved.set(ganre, forKey: "Gaanre")
         saved.set(favorites, forKey: "favorites")
         saved.synchronize()
         print(favorites)
@@ -124,6 +111,7 @@ class FavoriteController: UITableViewController {
             self.favorites.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+        self.saveList()
     }
 
     /*

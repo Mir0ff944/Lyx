@@ -12,6 +12,10 @@
 		D3259D471DF34A9500E1CDA4 /* Events.h in Headers */ = {isa = PBXBuildFile; fileRef = D3259D391DF34A9400E1CDA4 /* Events.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3259D511DF34AAF00E1CDA4 /* Eventim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259D501DF34AAF00E1CDA4 /* Eventim.swift */; };
 		D3259D521DF34AAF00E1CDA4 /* Eventim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259D501DF34AAF00E1CDA4 /* Eventim.swift */; };
+		D36F24981DFDA1CD00FF4E5D /* Performers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36F24971DFDA1CD00FF4E5D /* Performers.swift */; };
+		D36F249E1DFDC8A300FF4E5D /* Eventim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3259D501DF34AAF00E1CDA4 /* Eventim.swift */; };
+		D3FC7E9F1DFD932400FEC9B6 /* LyxWatchFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D3FC7E9D1DFD932400FEC9B6 /* LyxWatchFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3FC7EA71DFD943300FEC9B6 /* Events.h in Headers */ = {isa = PBXBuildFile; fileRef = D3259D391DF34A9400E1CDA4 /* Events.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +35,11 @@
 		D3259D3F1DF34A9400E1CDA4 /* EventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3259D441DF34A9500E1CDA4 /* EventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
 		D3259D461DF34A9500E1CDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3259D501DF34AAF00E1CDA4 /* Eventim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Eventim.swift; sourceTree = "<group>"; };
+		D3259D501DF34AAF00E1CDA4 /* Eventim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Eventim.swift; sourceTree = "<group>"; };
+		D36F24971DFDA1CD00FF4E5D /* Performers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Performers.swift; sourceTree = "<group>"; };
+		D3FC7E9B1DFD932400FEC9B6 /* LyxWatchFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LyxWatchFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FC7E9D1DFD932400FEC9B6 /* LyxWatchFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyxWatchFramework.h; sourceTree = "<group>"; };
+		D3FC7E9E1DFD932400FEC9B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3FC7E971DFD932400FEC9B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +73,7 @@
 			children = (
 				D3259D381DF34A9400E1CDA4 /* Events */,
 				D3259D431DF34A9500E1CDA4 /* EventsTests */,
+				D3FC7E9C1DFD932400FEC9B6 /* LyxWatchFramework */,
 				D3259D371DF34A9400E1CDA4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +83,7 @@
 			children = (
 				D3259D361DF34A9400E1CDA4 /* Events.framework */,
 				D3259D3F1DF34A9400E1CDA4 /* EventsTests.xctest */,
+				D3FC7E9B1DFD932400FEC9B6 /* LyxWatchFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +94,7 @@
 				D3259D391DF34A9400E1CDA4 /* Events.h */,
 				D3259D3A1DF34A9400E1CDA4 /* Info.plist */,
 				D3259D501DF34AAF00E1CDA4 /* Eventim.swift */,
+				D36F24971DFDA1CD00FF4E5D /* Performers.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -90,6 +108,15 @@
 			path = EventsTests;
 			sourceTree = "<group>";
 		};
+		D3FC7E9C1DFD932400FEC9B6 /* LyxWatchFramework */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC7E9D1DFD932400FEC9B6 /* LyxWatchFramework.h */,
+				D3FC7E9E1DFD932400FEC9B6 /* Info.plist */,
+			);
+			path = LyxWatchFramework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -98,6 +125,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3259D471DF34A9500E1CDA4 /* Events.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC7E981DFD932400FEC9B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FC7E9F1DFD932400FEC9B6 /* LyxWatchFramework.h in Headers */,
+				D3FC7EA71DFD943300FEC9B6 /* Events.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +176,24 @@
 			productReference = D3259D3F1DF34A9400E1CDA4 /* EventsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D3FC7E9A1DFD932400FEC9B6 /* LyxWatchFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FC7EA21DFD932400FEC9B6 /* Build configuration list for PBXNativeTarget "LyxWatchFramework" */;
+			buildPhases = (
+				D3FC7E961DFD932400FEC9B6 /* Sources */,
+				D3FC7E971DFD932400FEC9B6 /* Frameworks */,
+				D3FC7E981DFD932400FEC9B6 /* Headers */,
+				D3FC7E991DFD932400FEC9B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LyxWatchFramework;
+			productName = LyxWatchFramework;
+			productReference = D3FC7E9B1DFD932400FEC9B6 /* LyxWatchFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,6 +215,11 @@
 						DevelopmentTeam = 3PCKP334RB;
 						ProvisioningStyle = Automatic;
 					};
+					D3FC7E9A1DFD932400FEC9B6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3PCKP334RB;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = D3259D301DF34A9400E1CDA4 /* Build configuration list for PBXProject "Events" */;
@@ -177,6 +236,7 @@
 			targets = (
 				D3259D351DF34A9400E1CDA4 /* Events */,
 				D3259D3E1DF34A9400E1CDA4 /* EventsTests */,
+				D3FC7E9A1DFD932400FEC9B6 /* LyxWatchFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -196,6 +256,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3FC7E991DFD932400FEC9B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -203,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36F24981DFDA1CD00FF4E5D /* Performers.swift in Sources */,
 				D3259D511DF34AAF00E1CDA4 /* Eventim.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +281,14 @@
 			files = (
 				D3259D521DF34AAF00E1CDA4 /* Eventim.swift in Sources */,
 				D3259D451DF34A9500E1CDA4 /* EventsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FC7E961DFD932400FEC9B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D36F249E1DFDC8A300FF4E5D /* Eventim.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +469,52 @@
 			};
 			name = Release;
 		};
+		D3FC7EA01DFD932400FEC9B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3PCKP334RB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LyxWatchFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovCorp.LyxWatchFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		D3FC7EA11DFD932400FEC9B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3PCKP334RB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LyxWatchFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovCorp.LyxWatchFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,6 +541,15 @@
 			buildConfigurations = (
 				D3259D4E1DF34A9500E1CDA4 /* Debug */,
 				D3259D4F1DF34A9500E1CDA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FC7EA21DFD932400FEC9B6 /* Build configuration list for PBXNativeTarget "LyxWatchFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FC7EA01DFD932400FEC9B6 /* Debug */,
+				D3FC7EA11DFD932400FEC9B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
