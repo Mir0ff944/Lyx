@@ -15,15 +15,16 @@ class FavoriteController: UITableViewController {
 
     var favorites:[String] = []
 
+    /// Button outlet, connected to the button on the navigation bar that treiggers an action upon pressing on the button
+    ///
+    /// - Parameter sender: Bar button
     @IBAction func addFavorite(_ sender: UIBarButtonItem) {
         let message = UIAlertController(title: "New favorite performer", message: "", preferredStyle: .alert)
         message.addTextField(configurationHandler: { (textField: UITextField) -> Void in
             textField.placeholder = "Performer name"
             textField.accessibilityIdentifier = "nameField"
         })
-//        message.addTextField(configurationHandler: { (textField: UITextField) -> Void in
-//            textField.placeholder = "Genre"
-//        })
+
         message.addAction(UIAlertAction(title: "Add", style: .default, handler: {(action)  in
             if let textMessage = message.textFields {
                 let name = textMessage[0].text
@@ -39,6 +40,7 @@ class FavoriteController: UITableViewController {
     }
     
     
+    /// Method that saves the data stored inside the favorites list into the User Defaults
     func saveList() {
         let saved = UserDefaults.standard
         saved.set(favorites, forKey: "favorites")
@@ -47,7 +49,10 @@ class FavoriteController: UITableViewController {
         print("data laoded")
     }
     
+    /// Displays data stored inside the User Defaults into the table view
     override func viewDidLoad() {
+        self.navigationItem.title = NSLocalizedString("Favorites", comment: "Title of the navigation bar")
+        
         super.viewDidLoad()
         let savedItems = UserDefaults.standard
         if let loadedItems:[String] = savedItems.object(forKey: "favorites") as! [String]? {
@@ -58,11 +63,6 @@ class FavoriteController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
 
@@ -84,6 +84,12 @@ class FavoriteController: UITableViewController {
     }
 
     
+    /// Method that loads data into the table view cell with identifier "favoritecell"
+    ///
+    /// - Parameters:
+    ///   - tableView: table view
+    ///   - indexPath: indexPath
+    /// - Returns: returns cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoritecell", for: indexPath)
         if let label = cell.textLabel {
@@ -96,14 +102,6 @@ class FavoriteController: UITableViewController {
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -114,29 +112,5 @@ class FavoriteController: UITableViewController {
         self.saveList()
     }
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

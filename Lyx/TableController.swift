@@ -13,15 +13,12 @@ class TableController: UITableViewController, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchBar.delegate = self
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.title = NSLocalizedString("Events in Town", comment: "The title of the first table view")
+        self.searchBar.placeholder = NSLocalizedString("Search", comment: "Search")
     }
     
     /// A msearch method storing data into an array
@@ -33,6 +30,9 @@ class TableController: UITableViewController, UISearchBarDelegate {
         print("Search: \(searchQuery)")
     }
     
+    /// Method, executed upon pressing the search button
+    ///
+    /// - Parameter searchBar: searchBar
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let search = searchBar.text{
             print("Search button pressed: \(search)")
@@ -61,6 +61,12 @@ class TableController: UITableViewController, UISearchBarDelegate {
         return 1
     }
 
+    /// Method that creates number of table cells equal to the events stored inside the Event structure inside the framework
+    ///
+    /// - Parameters:
+    ///   - tableView: tableView
+    ///   - section: section
+    /// - Returns: returns the number of events
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return Eventim.sharedInstance.count
@@ -73,7 +79,7 @@ class TableController: UITableViewController, UISearchBarDelegate {
     /// - Parameters:
     ///   - tableView: tableView
     ///   - indexPath: indexPath
-    /// - Returns: loads data into the cells
+    /// - Returns: loads data into the table view cells and returns it
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Events", for: indexPath)
 
@@ -87,53 +93,12 @@ class TableController: UITableViewController, UISearchBarDelegate {
     }
     
 
-
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     /// Passing data from the table view to the EventsController
     ///
     /// - Parameters:
     ///   - segue: segue identtifier
-    ///   - sender: <#sender description#>
+    ///   - sender: sender
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //print(segue.identifier!)
         if segue.identifier == "favoriteResult" {
@@ -148,8 +113,7 @@ class TableController: UITableViewController, UISearchBarDelegate {
                 }
             }
         }
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
     }
 
 

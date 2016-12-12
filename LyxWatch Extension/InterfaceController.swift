@@ -17,6 +17,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var performerTitle: WKInterfaceLabel!
     @IBOutlet var performerDetails: WKInterfaceLabel!
     @IBOutlet var performerDesc: WKInterfaceLabel!
+    @IBOutlet var performerImage: WKInterfaceImage!
     
     
     var Performer: Artist? {
@@ -24,6 +25,13 @@ class InterfaceController: WKInterfaceController {
             performerDetails.setText(Performer?.genre)
             performerDesc.setText(Performer?.id)
             performerTitle.setText(Performer?.title)
+            if let url = NSURL(string: (Performer?.image)!) {
+                if let data = NSData(contentsOf: url as URL){
+                    
+                    performerImage.setImage(UIImage(data: data as Data))
+                    
+                }
+            }
         }
     }
 

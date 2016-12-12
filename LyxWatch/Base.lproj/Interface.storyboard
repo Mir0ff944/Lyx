@@ -23,11 +23,13 @@
                         <label width="136" alignment="left" text="Performer Desc" id="7Fz-CJ-JTr">
                             <fontDescription key="font" type="italicSystem" pointSize="11"/>
                         </label>
+                        <imageView alignment="left" id="9gM-U8-SbB"/>
                     </items>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     <connections>
                         <outlet property="performerDesc" destination="7Fz-CJ-JTr" id="ePv-KA-B8q"/>
                         <outlet property="performerDetails" destination="AIo-Vw-Fcf" id="eRq-wG-Zp2"/>
+                        <outlet property="performerImage" destination="9gM-U8-SbB" id="80i-Uv-3pR"/>
                         <outlet property="performerTitle" destination="4s4-HY-qya" id="KKr-Yc-co9"/>
                     </connections>
                 </controller>

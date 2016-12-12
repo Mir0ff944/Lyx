@@ -1,0 +1,72 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6ik-01-Kay"; */
+"6ik-01-Kay.text" = "Label";
+
+/* Class = "UILabel"; text = "Start time"; ObjectID = "8sB-Vu-eZl"; */
+"8sB-Vu-eZl.text" = "Start time";
+
+/* Class = "UINavigationItem"; title = "Events"; ObjectID = "970-29-BVw"; */
+"970-29-BVw.title" = "Events";
+
+/* Class = "UIBarButtonItem"; title = "Events"; ObjectID = "9DL-jY-RWs"; */
+"9DL-jY-RWs.title" = "Events";
+
+/* Class = "UILabel"; text = "Event"; ObjectID = "ByN-ql-s2H"; */
+"ByN-ql-s2H.text" = "Event";
+
+/* Class = "UIBarButtonItem"; title = "Favorites"; ObjectID = "Elf-KB-D5w"; */
+"Elf-KB-D5w.title" = "Favorites";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "FBg-Ql-Adc"; */
+"FBg-Ql-Adc.text" = "Description";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Fq9-5K-pbo"; */
+"Fq9-5K-pbo.text" = "Title";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "KCG-Lm-hkB"; */
+"KCG-Lm-hkB.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Event Title"; ObjectID = "MlY-EW-rsF"; */
+"MlY-EW-rsF.text" = "Event Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OFm-yZ-bab"; */
+"OFm-yZ-bab.text" = "Label";
+
+/* Class = "UILabel"; text = "Performer:"; ObjectID = "ScW-VT-S9M"; */
+"ScW-VT-S9M.text" = "Performer:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "TM7-pa-een"; */
+"TM7-pa-een.text" = "Label";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "WgU-n8-6JC"; */
+"WgU-n8-6JC.placeholder" = "Search";
+
+/* Class = "UISearchBar"; WgU-n8-6JC.scopeButtonTitles[0] = "Title"; ObjectID = "WgU-n8-6JC"; */
+"WgU-n8-6JC.scopeButtonTitles[0]" = "Title";
+
+/* Class = "UISearchBar"; WgU-n8-6JC.scopeButtonTitles[1] = "Title"; ObjectID = "WgU-n8-6JC"; */
+"WgU-n8-6JC.scopeButtonTitles[1]" = "Title";
+
+/* Class = "UINavigationItem"; title = "Events in town"; ObjectID = "bXu-7E-c4Q"; */
+"bXu-7E-c4Q.title" = "Events in town";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "oLV-3e-WFc"; */
+"oLV-3e-WFc.text" = "City";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "pQz-xk-Qp4"; */
+"pQz-xk-Qp4.text" = "Title";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "qlZ-bo-yb2"; */
+"qlZ-bo-yb2.title" = "Add";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "tG0-yG-9vI"; */
+"tG0-yG-9vI.text" = "Description";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "x59-eC-368"; */
+"x59-eC-368.text" = "Address";
+
+/* Class = "UILabel"; text = "Venue:"; ObjectID = "xvJ-TH-F6T"; */
+"xvJ-TH-F6T.text" = "Venue:";
+
+/* Class = "UINavigationItem"; title = "Favorites"; ObjectID = "yfm-S8-SUs"; */
+"yfm-S8-SUs.title" = "Favorites";

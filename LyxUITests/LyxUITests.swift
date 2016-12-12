@@ -30,7 +30,7 @@ class LyxUITests: XCTestCase {
     func testAddFavorite() {
         let app = XCUIApplication()
         let cells = app.tables.cells
-        app.navigationBars["Events in town"].buttons["Favorites"].tap()
+        app.navigationBars["Events in Town"].buttons["Favorites"].tap()
         XCTAssertEqual(cells.count, 0, "found insted: \(cells.debugDescription)")
         app.navigationBars["Favorites"].buttons["Add"].tap()
         app.textFields["nameField"].tap()
@@ -43,14 +43,14 @@ class LyxUITests: XCTestCase {
         app.alerts["New favorite performer"].buttons["Add"].tap()
         XCTAssertEqual(cells.count, 2, "found insted: \(cells.debugDescription)")
         app.navigationBars["Favorites"].buttons["Events"].tap()
-        app.navigationBars["Events in town"].buttons["Favorites"].tap()
+        app.navigationBars["Events in Town"].buttons["Favorites"].tap()
         sleep(1)
     }
 
     func testSwipeToDelete() {
         let app = XCUIApplication()
         let cells = app.tables.cells
-        app.navigationBars["Events in town"].buttons["Favorites"].tap()
+        app.navigationBars["Events in Town"].buttons["Favorites"].tap()
         app.navigationBars["Favorites"].buttons["Add"].tap()
         app.textFields["nameField"].tap()
         app.textFields["nameField"].typeText("Hardwell")
@@ -60,7 +60,7 @@ class LyxUITests: XCTestCase {
         cells.element(boundBy: 0).buttons["Delete"].tap()
         XCTAssertEqual(cells.count,0,  "found insted: \(cells.debugDescription)")
         app.navigationBars["Favorites"].buttons["Events"].tap()
-        app.navigationBars["Events in town"].buttons["Favorites"].tap()
+        app.navigationBars["Events in Town"].buttons["Favorites"].tap()
         sleep(1)
         
     }
@@ -69,7 +69,7 @@ class LyxUITests: XCTestCase {
     func testAddCancel() {
         let app = XCUIApplication()
         let cells = app.tables.cells
-        app.navigationBars["Events in town"].buttons["Favorites"].tap()
+        app.navigationBars["Events in Town"].buttons["Favorites"].tap()
         XCTAssertEqual(cells.count,2 , "found instead: \(cells.debugDescription)")
         app.navigationBars["Favorites"].buttons["Add"].tap()
         app.textFields["nameField"].tap()
@@ -85,7 +85,7 @@ class LyxUITests: XCTestCase {
         emptyListTable.segmentedControls.children(matching: .button).matching(identifier: "Title").element(boundBy: 0).tap()
         emptyListTable.searchFields["Search"].typeText("London\r")
         app.keyboards.buttons["Search"].tap()
-        cells.element(boundBy: 1).tap()
+        cells.element(boundBy: 2).tap()
         app.navigationBars["Events"].buttons["Events"].tap()
         
     }

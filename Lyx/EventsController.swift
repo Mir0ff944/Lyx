@@ -8,14 +8,13 @@
 
 import UIKit
 import Events
-//import QuartzCore
 
 class EventsController: UIViewController {
 
-//    var eventID: String?
     var event: Event?
     var imageUI: NSData?
     
+    /// Outlets connected to the items inside the details view
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
     @IBOutlet var summaryView: UIView!
@@ -34,13 +33,25 @@ class EventsController: UIViewController {
     @IBOutlet var venueDetails: UIView!
     @IBOutlet var performerViewHeight: NSLayoutConstraint!
     @IBOutlet var venue: UILabel!
+    @IBOutlet var eventlabel: UILabel!
+    @IBOutlet var performerlabel: UILabel!
+    @IBOutlet var descriptionlabel: UILabel!
 
 
 
     
     /// Loads the data passed from TableControlle's table view
-    
     override func viewDidLoad() {
+        self.eventTitle.text = NSLocalizedString("Event Title", comment: "A label where the event title is assigned")
+        self.city.text = NSLocalizedString("City", comment: "A label where the city is assigned")
+        self.eventAddress.text = NSLocalizedString("Address", comment: "A label where the address is assigned")
+        self.eventlabel.text = NSLocalizedString("Event", comment: "Event")
+        self.startTime.text = NSLocalizedString("Start time", comment: "label where start time is assigned")
+        self.venue.text = NSLocalizedString("Venue", comment: "Label showing the venue details")
+        self.performerlabel.text = NSLocalizedString("Performer", comment: "Label showing performerm details")
+        self.descriptionlabel.text = NSLocalizedString("Description", comment: "Description Label")
+        self.navigationItem.title = NSLocalizedString("Events", comment: "Title of the navigation bar")
+        
         super.viewDidLoad()
         
         summaryView.layer.cornerRadius = 5
@@ -63,7 +74,7 @@ class EventsController: UIViewController {
             }
         }
         DispatchQueue.main.async {
-            self.summaryViewHeight.constant = self.imageView.frame.height + 20
+            self.summaryViewHeight.constant = self.imageView.frame.height + 70
             self.descriptionViewHeight.constant = self.eventDescription.frame.height + 20
             self.performerViewHeight.constant = self.venue.frame.height + self.venueName.frame.height + self.startTime.frame.height + 20
             print("summary Height \(self.summaryViewHeight)")
@@ -77,8 +88,6 @@ class EventsController: UIViewController {
             self.contentView.sizeToFit()
         }
 
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,16 +95,5 @@ class EventsController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Public structure that stores the events details
 public  struct Event {
     public var title: String?
     public var city: String?
@@ -22,10 +23,12 @@ public  struct Event {
     public var venue: String?
 }
 
+/// Public structure that sotres the performer details
 public struct Artist {
     public var title: String
     public var genre: String
     public var id: String
+    public var image: String
 }
 
 
@@ -39,6 +42,7 @@ enum JSONError: Error{
 }
 
 public  class Eventim{
+    /// declaring a singleton that makes all the functions inside the class available globally
     public static var sharedInstance = Eventim()
     
     var Favorite: [Event]
@@ -56,6 +60,10 @@ public  class Eventim{
         }
     }
     
+    /// Method, making an api call and retrieves details of a perfrmer
+    ///
+    /// - Parameter completion: returns the performer details upon completion
+    /// - Throws: throws missing parameters
     public func searchPerformer( _ completion: @escaping (Artist)->()) throws {
         let json = "https://lyx-api.herokuapp.com/performer?p=Hardwell"
         print(json)
@@ -66,7 +74,6 @@ public  class Eventim{
         session.dataTask(with: performerURL as URL, completionHandler: {(data, response, error) -> Void in
             do{
                 let json = try JSONSerialization.jsonObject(with: data!) as! [String: Any]
-//                print (json)
                 guard let jsondata = json["performers"] as! [[String: Any]]? else {
                     throw JSONError.InvalidKey("Invalid event")
                 }
@@ -78,7 +85,8 @@ public  class Eventim{
                     print(genre!)
                     let id = result["id"] as? String!
                     print(id!)
-                    let performer = Artist(title: title!, genre: genre!, id:id!)
+                    let image = result["image"] as? String!
+                    let performer = Artist(title: title!, genre: genre!, id:id!, image: image!)
                     completion(performer)
                 }
 
@@ -89,13 +97,9 @@ public  class Eventim{
         }).resume()
     }
     
-    public func getPerformer(forIndex index: Int) -> Artist {
-        return Performer[index]
-    }
     
     
-    
-    /// API call, laoding events into the table view
+    /// Method, making an api call and loads all the events into the Event structure
     ///
     /// - Parameters:
     ///   - text: search querey
@@ -165,6 +169,10 @@ public  class Eventim{
         }).resume()
     }
     
+    /// Method which populates the data from the Event structure
+    ///
+    /// - Parameter index: index of the events
+    /// - Returns: returns the details for a specific event(index)
     public func getEvent(forIndex index: Int) -> Event {
         return Favorite[index]
     }
